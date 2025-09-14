@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Shield, Users, ArrowRight, CheckCircle } from "lucide-react";
+import { Highlight } from "@/components/ui/hero-highlight";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/10"></div>
         </div>
 
         {/* Background with animated gradient */}
@@ -45,17 +46,19 @@ export default function Home() {
 
               {/* Main Headline */}
               <div className="space-y-6">
-                <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight">
+                <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight animate-in fade-in slide-in-from-bottom duration-1000">
                   Your Journey to
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
                     Recovery
                   </span>
                   <span className="block text-4xl md:text-5xl font-light">
-                    Starts Here
+                    <Highlight className="bg-gradient-to-r from-brand-gold to-brand-gold text-transparent bg-clip-text font-medium">
+                      Starts Here
+                    </Highlight>
                   </span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl animate-in fade-in slide-in-from-bottom duration-1000 ">
                   Compassionate, evidence-based treatment for substance abuse
                   and mental health challenges.
                   <span className="text-brand-gold font-semibold">
@@ -87,7 +90,7 @@ export default function Home() {
 
               {/* Trust Indicators */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/20">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 animate-in fade-in duration-1000 hover:scale-105 transition-all">
                   <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
                     <CheckCircle
                       className="text-brand-gold"
@@ -103,7 +106,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 animate-in fade-in duration-1000 hover:scale-105 transition-all">
                   <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
                     <CheckCircle
                       className="text-brand-gold"
@@ -119,7 +122,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 animate-in fade-in duration-1000 hover:scale-105 transition-all">
                   <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
                     <CheckCircle
                       className="text-brand-gold"

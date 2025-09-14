@@ -126,14 +126,14 @@ export default function PatientPortal() {
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
             <div className="space-y-6 mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 Patient{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
                   Portal
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
                 Access your treatment information, schedule appointments, and
                 connect with resources to support your
                 <span className="text-brand-gold font-semibold">

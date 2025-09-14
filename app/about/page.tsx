@@ -19,6 +19,7 @@ import erinImage from "./images/erin.webp";
 import shannonImage from "./images/shannon.webp";
 import ometrisImage from "./images/ometris.webp";
 import georgeImage from "./images/george.jpg";
+import {cn} from "@/lib/utils";
 
 export default function About() {
   const teamMembers = [
@@ -117,10 +118,11 @@ export default function About() {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+       
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
             <div className="space-y-6 mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 About{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
                   Integrity Care
@@ -130,7 +132,7 @@ export default function About() {
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
                 We are a dedicated team of mental health and addiction treatment
                 professionals committed to providing compassionate,
                 evidence-based care that{" "}
@@ -191,7 +193,8 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+         
         </div>
       </section>
 
