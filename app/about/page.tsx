@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Heart,
@@ -8,44 +10,58 @@ import {
   Phone,
   Mail,
   MapPin,
+  X,
 } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import fatthiImage from "./images/fatthi.webp";
+import erinImage from "./images/erin.webp";
+import shannonImage from "./images/shannon.webp";
+import ometrisImage from "./images/ometris.webp";
 
 export default function About() {
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
-      title: "Clinical Director",
-      credentials: "PhD, LCSW, CADC",
-      specialty: "Substance Abuse & Trauma Therapy",
+      name: "Fatthi Sadeddin",
+      title: "Founder",
+      credentials: "",
+      specialty: "Leadership & Vision",
       experience: "15+ years",
-      image: "/api/placeholder/300/300",
+      image: fatthiImage,
+      bio: "Bio coming soon...",
     },
     {
-      name: "Michael Chen",
-      title: "Lead Therapist",
-      credentials: "LPC, NCC",
-      specialty: "Mental Health & Family Therapy",
+      name: "Erin Stark",
+      title: "General Managing Director",
+      credentials: "",
+      specialty: "Operations & Management",
       experience: "12+ years",
-      image: "/api/placeholder/300/300",
+      image: erinImage,
+      bio: "Erin has been involved in the healthcare field for over 35 years. With a major emphasis on Revenue Cycle Management functions, Erin has assisted in opening 131 outpatient clinics in 27 states, over the years and continues to help providers with all service needs. Erin has been in management positions for the bulk of her career and has worked in a variety of settings including hospitals, SNF's, CCRC communities and behavioral health entities. Erin has worked in the behavioral health field for the last 15 years and has served as a Lead Behavioral Health Technician, a BHT Supervisor and leads group counseling, individual counseling, one on one sessions and mentor sessions for women, under the direction of Licensed Professional Counselors or other Licensed Professional Staff. Erin truly cares about our clients and helping them achieve their goals of attaining sobriety, regaining their independence and getting back to leading full, active, sober, productive lives.\n\nErin has three adult sons and four grandchildren. In her free time, she enjoys doing any thing outdoors, cooking, baking, reading and hanging out with her dog.",
     },
     {
-      name: "Dr. Robert Martinez",
-      title: "Psychiatrist",
-      credentials: "MD, Board Certified",
-      specialty: "Dual Diagnosis & Medication Management",
-      experience: "20+ years",
-      image: "/api/placeholder/300/300",
-    },
-    {
-      name: "Jennifer Williams",
-      title: "Family Counselor",
-      credentials: "LMFT, AAMFT",
-      specialty: "Family Systems & Recovery Support",
+      name: "Shannon Riley",
+      title: "Operations Manager",
+      credentials: "",
+      specialty: "Operations & Coordination",
       experience: "10+ years",
-      image: "/api/placeholder/300/300",
+      image: shannonImage,
+      bio: "Shannon Riley has been in the health care field for 27 years. Working most of those years in the medical field, with 5 of those years in the Behavioral Health genera. With in that time frame she has been a client favorite as a behavioral health technician, for the past 2 years she has served as Behavioral Health Director. In the past year and half addition to her Behavioral Health Director duties Shannon has been learning the Operational aspects of operating an outpatient behavioral health clinic. In her role as Operations Manager for Integrity Care Connection, she will be providing operations management as well as supervision for behavioral health staff. In her free time, Shannon likes to be outside exploring Portland and surrounding areas. Shannon has two daughters one who is a Direct Support Aide for at risk individuals and Shannon's second daughter tends to keep the family busy with her school activities and events.",
+    },
+    {
+      name: "Dr. Ometris King",
+      title: "Clinical Director/CMHP/LPC",
+      credentials: "",
+      specialty: "Clinical Leadership & Mental Health",
+      experience: "15+ years",
+      image: ometrisImage,
+      bio: "Bio coming soon...",
     },
   ];
+
+  const [selectedMember, setSelectedMember] = useState<
+    (typeof teamMembers)[0] | null
+  >(null);
 
   const values = [
     {
@@ -74,13 +90,6 @@ export default function About() {
     },
   ];
 
-  const stats = [
-    { number: "500+", label: "Lives Transformed" },
-    { number: "15+", label: "Years of Service" },
-    { number: "95%", label: "Client Satisfaction" },
-    { number: "24/7", label: "Crisis Support" },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -100,110 +109,118 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
-      <section className="py-20 bg-white">
+      {/* Our Team */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl bg-brand-blue/5">
-              <Heart
-                className="text-brand-blue mx-auto mb-6"
-                size={48}
-              />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Mission
-              </h3>
-              <p className="text-gray-600">
-                To provide compassionate, evidence-based treatment for substance
-                abuse and mental health challenges, empowering individuals and
-                families to achieve lasting recovery and wellness.
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our experienced team of licensed professionals is dedicated to
+              providing the highest quality care with compassion and expertise.
+            </p>
+          </div>
 
-            <div className="text-center p-8 rounded-xl bg-brand-gold/5">
-              <Shield
-                className="text-brand-gold mx-auto mb-6"
-                size={48}
-              />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Vision
-              </h3>
-              <p className="text-gray-600">
-                A world where every person struggling with addiction or mental
-                health challenges has access to quality care and the support
-                they need to heal and thrive.
-              </p>
-            </div>
-
-            <div className="text-center p-8 rounded-xl bg-brand-gold/5">
-              <Users
-                className="text-brand-gold mx-auto mb-6"
-                size={48}
-              />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h3>
-              <p className="text-gray-600">
-                Compassion, integrity, connection, and excellence guide
-                everything we do as we work to create a safe, supportive
-                environment for healing and recovery.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              >
+                <div className="h-64 bg-gray-200 flex items-center justify-center">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-brand-blue font-medium mb-2">
+                    {member.title}
+                  </p>
+                  {member.credentials && (
+                    <p className="text-sm text-gray-600 mb-2">
+                      {member.credentials}
+                    </p>
+                  )}
+                  <p className="text-sm text-gray-500 mb-4">
+                    {member.specialty}
+                  </p>
+                  <button
+                    onClick={() => setSelectedMember(member)}
+                    className="w-full bg-brand-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-blue/90 transition-colors duration-200"
+                  >
+                    Read Bio
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Mission */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center p-8 rounded-xl bg-brand-blue/5">
+            <Heart
+              className="text-brand-blue mx-auto mb-6"
+              size={48}
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Our Mission
+            </h3>
+            <p className="text-gray-600 max-w-4xl mx-auto">
+              Here at ICC, our mission is to provide compassionate, holistic,
+              individual-centered and direct treatment and approach for
+              individuals facing gambling, substance abuse and mental health
+              challenges, empowering them to achieve lasting recovery and
+              wellness. We strive to promote individual empowerment and increase
+              access to treatment and services for persons living with
+              behavioral health and mental health challenges. We are committed
+              to excellence, integrity, and respect for diversity - creating a
+              safe, collaborative environment where everyone is treated with
+              dignity in the utmost confidence. By fostering hope and nurturing
+              self determination, we support each person's unique journey toward
+              healing and resilience. What separates Integrity Care Connections
+              from other outpatient treatment centers, is our drive for
+              excellence and unwavering determination to provide our clients
+              with the tools, education and skills they need to create better,
+              empowered lives and assist in helping them obtain healthier living
+              conditions within the communities in which they live.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Story
-              </h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Integrity Care Connection was founded in 2009 by a group of
-                  mental health professionals who recognized the need for
-                  comprehensive, compassionate care for individuals struggling
-                  with substance abuse and mental health challenges.
-                </p>
-                <p>
-                  What started as a small outpatient clinic has grown into a
-                  comprehensive treatment center serving hundreds of individuals
-                  and families each year. Our founders believed that recovery is
-                  possible for everyone, and that belief continues to drive our
-                  work today.
-                </p>
-                <p>
-                  Over the years, we have expanded our services, added
-                  specialized programs, and built a team of dedicated
-                  professionals who share our commitment to excellence and
-                  compassion. We have seen countless individuals transform their
-                  lives and rebuild their relationships, and we are honored to
-                  be part of their journey.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Our Impact
-                </h3>
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat, index) => (
-                    <div
-                      key={index}
-                      className="text-center"
-                    >
-                      <div className="text-3xl font-bold text-brand-blue mb-2">
-                        {stat.number}
-                      </div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="text-center p-8 rounded-xl bg-brand-gold/5">
+            <Shield
+              className="text-brand-gold mx-auto mb-6"
+              size={48}
+            />
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Our Vision
+            </h3>
+            <p className="text-gray-600 max-w-4xl mx-auto">
+              Our vision is to improve the lives of those living with
+              behavioral/mental issues and provide emotional wellness for
+              individuals and families as we strive to deliver services and
+              support necessary to improve the quality of life for children,
+              youth, and adults with mental and behavioral/addictive challenges.
+              We believe that, with the right personalised support, anyone with
+              a behavioral and/or mental health need can live the life they want
+              to live. It is our vision that everyone gets the personalised
+              services and support they need.
+            </p>
           </div>
         </div>
       </section>
@@ -243,53 +260,17 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Team */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our experienced team of licensed professionals is dedicated to
-              providing the highest quality care with compassion and expertise.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-              >
-                <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                    <Users
-                      className="text-gray-500"
-                      size={48}
-                    />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-brand-blue font-medium mb-2">
-                    {member.title}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    {member.credentials}
-                  </p>
-                  <p className="text-sm text-gray-500 mb-2">
-                    {member.specialty}
-                  </p>
-                  <p className="text-xs text-gray-400">
-                    {member.experience} experience
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Founder's Quote */}
+      <section className="py-20 bg-brand-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+            "Our goal is to be a leader in improving the health and wellness of
+            our community by providing inspired treatments, teaching our clients
+            healthy practices, and promoting wellness education."
+          </blockquote>
+          <cite className="text-xl text-white font-semibold">
+            — Fatthi Sadeddin, Founder
+          </cite>
         </div>
       </section>
 
@@ -379,6 +360,42 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Bio Modal */}
+      {selectedMember && (
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl">
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                    {selectedMember.name}
+                  </h3>
+                  <p className="text-brand-blue font-medium text-lg">
+                    {selectedMember.title}
+                  </p>
+                  {selectedMember.credentials && (
+                    <p className="text-sm text-gray-600">
+                      {selectedMember.credentials}
+                    </p>
+                  )}
+                </div>
+                <button
+                  onClick={() => setSelectedMember(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              <div className="prose prose-gray max-w-none">
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {selectedMember.bio}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

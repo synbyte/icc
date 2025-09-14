@@ -5,112 +5,125 @@ import {
   CheckCircle,
   ArrowRight,
   Phone,
+  Heart,
+  Shield,
+  BookOpen,
+  Home,
+  Brain,
+  UserCheck,
+  Activity,
+  Lightbulb,
+  HandHeart,
+  Stethoscope,
+  FileText,
+  Target,
+  Globe,
 } from "lucide-react";
 import Link from "next/link";
 
 export default function Programs() {
   const programs = [
     {
-      title: "Intensive Outpatient Program (IOP)",
-      duration: "8-12 weeks",
+      title: "Comprehensive Outpatient Treatment",
+      duration: "12-24 weeks",
       schedule: "3-5 sessions per week",
       description:
-        "A structured program for those who need more support than traditional outpatient care but don't require residential treatment.",
+        "Our primary treatment program combining individual therapy, group sessions, and comprehensive support services for substance use and behavioral health disorders.",
       features: [
-        "Individual therapy sessions",
-        "Group therapy and support groups",
-        "Life skills training",
-        "Relapse prevention planning",
-        "Family involvement and education",
-        "Medication management if needed",
+        "Weekly individual therapy sessions",
+        "Daily group therapy and support groups",
+        "Family therapy and reconnection support",
+        "Life skills mentoring and training",
+        "PsychoSocial/Educational counseling",
+        "Health, nutrition, and fitness support",
       ],
       intensity: "High",
       color: "blue",
     },
     {
-      title: "Standard Outpatient Program",
-      duration: "12-24 weeks",
-      schedule: "1-3 sessions per week",
-      description:
-        "Flexible treatment program designed to fit into your daily life while providing essential support and therapy.",
-      features: [
-        "Individual counseling sessions",
-        "Group therapy options",
-        "Psychoeducation workshops",
-        "Recovery planning",
-        "Ongoing support and monitoring",
-        "Family therapy sessions",
-      ],
-      intensity: "Medium",
-      color: "green",
-    },
-    {
-      title: "Dual Diagnosis Program",
+      title: "Dual Diagnosis & Co-Occurring Disorders",
       duration: "16-24 weeks",
       schedule: "4-6 sessions per week",
       description:
-        "Specialized program for individuals with co-occurring substance abuse and mental health disorders.",
+        "Specialized program for individuals with co-occurring substance use and mental health disorders, providing integrated treatment approaches.",
       features: [
         "Integrated treatment approach",
-        "Psychiatric evaluation and medication management",
+        "Medical evaluation and blood workup",
         "Individual and group therapy",
-        "Trauma-informed care",
-        "Crisis intervention training",
-        "Comprehensive aftercare planning",
+        "Mental clarity and wellness sessions",
+        "Peer support from lived experience",
+        "Comprehensive care coordination",
       ],
       intensity: "High",
       color: "purple",
     },
     {
-      title: "Family Recovery Program",
+      title: "Gambling Addiction Recovery",
+      duration: "12-20 weeks",
+      schedule: "3-4 sessions per week",
+      description:
+        "Specialized program for gambling addiction disorders, addressing the unique challenges and providing targeted support for recovery.",
+      features: [
+        "Gambling-specific therapy sessions",
+        "Financial counseling and budgeting",
+        "Peer support from recovered individuals",
+        "Family therapy and education",
+        "Community meeting referrals (GA)",
+        "Relapse prevention planning",
+      ],
+      intensity: "High",
+      color: "green",
+    },
+    {
+      title: "Family Recovery & Support",
       duration: "8-16 weeks",
       schedule: "2-3 sessions per week",
       description:
-        "Comprehensive support program for families affected by addiction and mental health issues.",
+        "Comprehensive support program for families affected by addiction, focusing on healing relationships and building healthy communication.",
       features: [
-        "Family therapy sessions",
-        "Educational workshops",
-        "Support group meetings",
-        "Communication skills training",
+        "Family therapy and reconnection",
+        "Parent training and coaching",
+        "Communication skills development",
         "Boundary setting education",
-        "Recovery planning for families",
+        "Spiritual acceptance support",
+        "Community integration activities",
       ],
       intensity: "Medium",
       color: "orange",
     },
     {
-      title: "Aftercare & Alumni Program",
-      duration: "Ongoing",
-      schedule: "Monthly meetings",
+      title: "Life Skills & Independence",
+      duration: "8-12 weeks",
+      schedule: "2-3 sessions per week",
       description:
-        "Long-term support program for graduates to maintain their recovery and prevent relapse.",
+        "Focused program on developing essential life skills, employment readiness, and independent living capabilities for sustained recovery.",
       features: [
-        "Monthly support group meetings",
-        "Individual check-ins",
-        "Relapse prevention workshops",
-        "Peer mentorship opportunities",
-        "Community events and activities",
-        "24/7 crisis support access",
+        "Life skills mentoring and training",
+        "Employment and educational support",
+        "Financial counseling and budgeting",
+        "Health and nutrition education",
+        "Community integration outings",
+        "Peer support and encouragement",
       ],
-      intensity: "Low",
+      intensity: "Medium",
       color: "indigo",
     },
     {
-      title: "Crisis Intervention Program",
-      duration: "1-4 weeks",
-      schedule: "Daily sessions",
+      title: "Ongoing Support & Aftercare",
+      duration: "Ongoing",
+      schedule: "Monthly meetings",
       description:
-        "Immediate, intensive support for individuals experiencing a mental health or addiction crisis.",
+        "Long-term support program for program graduates, providing continued care and community connection to maintain recovery.",
       features: [
-        "Daily individual therapy",
-        "Crisis stabilization techniques",
-        "Safety planning",
-        "Medication management",
-        "Family support and education",
-        "Transition planning to ongoing care",
+        "Monthly support group meetings",
+        "Individual check-ins and monitoring",
+        "Open sharing and talking circles",
+        "Community event participation",
+        "Peer mentorship opportunities",
+        "24/7 crisis support access",
       ],
-      intensity: "Very High",
-      color: "red",
+      intensity: "Low",
+      color: "blue",
     },
   ];
 
@@ -152,10 +165,11 @@ export default function Programs() {
               Our <span className="text-brand-blue">Programs</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We offer a variety of evidence-based treatment programs designed
-              to meet you where you are in your recovery journey. Each program
-              is tailored to provide the right level of support for your unique
-              needs.
+              Our mission is to provide education, counseling, tools and support
+              necessary for our patient/clients to achieve sobriety,
+              self-reliance from addictive behaviors, and the ability to live a
+              healthy, productive, sober life. We meet you where you are and
+              provide a hand up, not a hand out.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -175,6 +189,532 @@ export default function Programs() {
         </div>
       </section>
 
+      {/* Program Description */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Comprehensive Approach
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 mb-6">
+                The mission, goal and purpose of Integrity Care Connections
+                LLC's program is to provide education, counseling, tools and
+                support necessary for our patient/clients to achieve sobriety,
+                self-reliance from addictive behaviors, controlling
+                behavioral/mental health issues and the ability to live a
+                healthy, productive, sober life.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                We do this by ensuring our outpatient treatment center is a
+                welcoming, safe, comfortable and accepting environment that
+                allows each individual to focus on their own healing journey
+                surrounded by dedicated staff who meets them where they are and
+                provides a hand up, not a hand out.
+              </p>
+              <p className="text-lg text-gray-600">
+                Our experienced staff specializes in substance use disorders,
+                gambling addiction disorders, behavioral/mental health issues,
+                co-occurring illnesses and whole person, holistic approaches
+                allowing us to identify and address each individual's behavioral
+                and mental wellness.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart
+                  className="text-brand-blue"
+                  size={32}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Welcoming Environment
+              </h3>
+              <p className="text-gray-600">
+                Safe, comfortable, and accepting atmosphere for healing
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield
+                  className="text-brand-gold"
+                  size={32}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Dedicated Staff
+              </h3>
+              <p className="text-gray-600">
+                Licensed professionals who meet you where you are
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target
+                  className="text-brand-blue"
+                  size={32}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Holistic Approach
+              </h3>
+              <p className="text-gray-600">
+                Whole person wellness and individualized treatment plans
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Care Coordination */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Care Coordination
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive admission process ensuring whole-person care
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Thorough Admission Process
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle
+                    className="text-green-500 mt-1"
+                    size={20}
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">
+                      Intake Paperwork
+                    </h4>
+                    <p className="text-gray-600">
+                      Complete admission documentation and assessments
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle
+                    className="text-green-500 mt-1"
+                    size={20}
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">
+                      Behavioral Health Assessment
+                    </h4>
+                    <p className="text-gray-600">
+                      Comprehensive evaluation by licensed professionals
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle
+                    className="text-green-500 mt-1"
+                    size={20}
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">
+                      Initial Treatment Plan
+                    </h4>
+                    <p className="text-gray-600">
+                      Personalized plan approved by medical and mental health
+                      professionals
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle
+                    className="text-green-500 mt-1"
+                    size={20}
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">
+                      Medical Evaluation
+                    </h4>
+                    <p className="text-gray-600">
+                      Complete physical with metabolic blood workup by Medical
+                      Director
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="flex items-center mb-6">
+                <Stethoscope
+                  className="text-brand-blue mr-3"
+                  size={32}
+                />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Community Partnerships
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Our community partnerships ensure that our patient/clients have
+                access to the services they need that will best assist them with
+                attaining their holistic health goals.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <Globe
+                    className="text-brand-gold"
+                    size={16}
+                  />
+                  <span className="text-sm text-gray-600">
+                    Medical services and specialists
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe
+                    className="text-brand-gold"
+                    size={16}
+                  />
+                  <span className="text-sm text-gray-600">
+                    Mental health resources
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe
+                    className="text-brand-gold"
+                    size={16}
+                  />
+                  <span className="text-sm text-gray-600">
+                    Community support services
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe
+                    className="text-brand-gold"
+                    size={16}
+                  />
+                  <span className="text-sm text-gray-600">
+                    Educational and employment resources
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Program Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive treatment modalities designed to combat addictive
+              behaviors from all perspectives
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Individual Therapy */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <UserCheck
+                  className="text-brand-blue mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Individual Therapy
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Weekly individual treatment sessions ensuring each person
+                addresses their unique needs and has the opportunity to be heard
+                as an active decision maker in their treatment.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Weekly individual sessions</li>
+                <li>• In-person or telehealth options</li>
+                <li>• Treatment plan updates as needed</li>
+                <li>• Qualified Mental Health Professional oversight</li>
+              </ul>
+            </div>
+
+            {/* Group Therapy */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Users
+                  className="text-brand-gold mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Group Therapy
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Daily group sessions allowing patients to see they're not alone
+                and learn from others' experiences, failures, and successes on
+                their wellness journey.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Daily group sessions</li>
+                <li>• Addiction, relapse, and recovery topics</li>
+                <li>• Life skills and psychosocial education</li>
+                <li>• Meditation, yoga, and arts activities</li>
+              </ul>
+            </div>
+
+            {/* Family Therapy */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Home
+                  className="text-brand-blue mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Family Therapy
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Encouraging reconnection with family in a safe environment,
+                moderated by professional staff to repair damaged bonds and
+                embrace the future as a unit.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Safe family discussions</li>
+                <li>• Parent training and coaching</li>
+                <li>• Professional moderation</li>
+                <li>• Bond repair and healing</li>
+              </ul>
+            </div>
+
+            {/* Spiritual Acceptance Therapy */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Heart
+                  className="text-brand-gold mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Spiritual Acceptance Therapy
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Supporting all patients in their chosen beliefs or lack thereof,
+                with community partnerships providing religious services and
+                culturally specific spiritual needs.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Inclusive spiritual support</li>
+                <li>• Community religious services</li>
+                <li>• Cultural spiritual needs</li>
+                <li>• Professional counseling sessions</li>
+              </ul>
+            </div>
+
+            {/* Life Skills Mentoring */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <BookOpen
+                  className="text-brand-blue mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Life Skills Mentoring
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Comprehensive life skills instruction covering basic hygiene,
+                cleaning, cooking, appointments, parenting skills, and all
+                facets of everyday living.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Basic hygiene and cleaning</li>
+                <li>• Cooking and meal planning</li>
+                <li>• Appointment management</li>
+                <li>• Parenting skills training</li>
+              </ul>
+            </div>
+
+            {/* PsychoSocial/Educational Counseling */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Lightbulb
+                  className="text-brand-gold mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  PsychoSocial/Educational Counseling
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Guidance with resume building, job preparedness, financial
+                counseling, educational needs, and all tools necessary for
+                educational, employment, and financial success.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Resume building and job skills</li>
+                <li>• Financial counseling and budgeting</li>
+                <li>• Educational support and GED prep</li>
+                <li>• Professional development</li>
+              </ul>
+            </div>
+
+            {/* Health & Nutrition; Fitness */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Activity
+                  className="text-brand-blue mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Health & Nutrition; Fitness
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Encouraging physical fitness and proper nutrition through
+                community partnerships with nutritionists and fitness centers,
+                tailored to each individual's wellness journey.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Personalized fitness plans</li>
+                <li>• Nutrition counseling</li>
+                <li>• Community fitness partnerships</li>
+                <li>• Mental and physical wellness</li>
+              </ul>
+            </div>
+
+            {/* Mental Clarity Sessions */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <Brain
+                  className="text-brand-gold mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Mental Clarity Sessions
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Supporting overall brain health through meditation, stretching,
+                yoga, mental exercises, relaxation techniques, and coping skills
+                for mind, body, and spirit.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Meditation and yoga</li>
+                <li>• Mental exercises</li>
+                <li>• Relaxation techniques</li>
+                <li>• Coping skills development</li>
+              </ul>
+            </div>
+
+            {/* Peer Support Sessions */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+              <div className="flex items-center mb-4">
+                <HandHeart
+                  className="text-brand-blue mr-3"
+                  size={24}
+                />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Peer Support Sessions
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Sessions led by certified Peer Specialists who speak from lived
+                experiences, providing living proof that substance use and
+                mental health issues can be overcome.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Certified Peer Specialists</li>
+                <li>• Lived experience sharing</li>
+                <li>• Real-life success stories</li>
+                <li>• Peer-to-peer encouragement</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Additional Services */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Additional Program Services
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                  Individual/Group Outings
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Fun, safe activities designed to immerse patients in community
+                  settings, teaching socially acceptable behaviors and
+                  encouraging healthy, sober community engagement.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Community integration activities</li>
+                  <li>• Cultural and ethnic specific events</li>
+                  <li>• Social skills development</li>
+                  <li>• Life balance support</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                  AA/Gamblers A/NA/ALANON
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Encouraging participation in community support programs to
+                  gain different insights on coping, failure, and success from
+                  others on similar journeys.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Community meeting referrals</li>
+                  <li>• Cultural/ethnic specific groups</li>
+                  <li>• Peer support integration</li>
+                  <li>• Recovery toolbox building</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                  Open Sharing/Talking Circle
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Open sessions for patients to share their journeys, discuss
+                  what works and what doesn't, and bond with others while
+                  providing mutual support and encouragement.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Open sharing sessions</li>
+                  <li>• Peer-to-peer advice</li>
+                  <li>• Staff-monitored discussions</li>
+                  <li>• Mutual encouragement</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                  Wellness Team
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Our comprehensive team includes licensed behavioral/mental
+                  health professionals, medical professionals, counselors,
+                  community health workers, peer support specialists, and case
+                  managers.
+                </p>
+                <ul className="space-y-1 text-sm text-gray-600">
+                  <li>• Licensed professionals</li>
+                  <li>• Medical health professionals</li>
+                  <li>• Community health workers</li>
+                  <li>• Peer support specialists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Programs Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,12 +725,12 @@ export default function Programs() {
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200 overflow-hidden"
               >
                 <div className="p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900">
+                  <div className="flex items-start justify-between mb-4 gap-3">
+                    <h3 className="text-2xl font-bold text-gray-900 flex-1 min-w-0">
                       {program.title}
                     </h3>
                     <span
-                      className={`px-3 py-1 rounded-full text-sm font-semibold ${getIntensityColor(
+                      className={`px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap flex-shrink-0 ${getIntensityColor(
                         program.intensity
                       )}`}
                     >
@@ -245,9 +785,7 @@ export default function Programs() {
 
                   <Link
                     href="/contact"
-                    className={`w-full ${getColorClasses(
-                      program.color
-                    )} border-2 px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity duration-200 flex items-center justify-center`}
+                    className="w-full bg-brand-blue/10 text-brand-blue border-brand-blue/20 border-2 px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
                   >
                     Learn More
                     <ArrowRight

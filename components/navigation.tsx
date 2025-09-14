@@ -18,36 +18,22 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white/30 backdrop-blur-md shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
             <Image
               src="/logo.png"
               alt="Integrity Care Connection"
-              width={100}
-              height={64}
-              className="w-auto lg:hidden"
+              width={300}
+              height={160}
+              className="h-20 w-auto"
+              priority
             />
-            <Image
-              src="/logo_notext.png"
-              alt="Integrity Care Connection"
-              width={64}
-              height={64}
-              className="hidden lg:block"
-            />
-            <div className="hidden lg:block">
-              <h1 className="text-sm xl:text-xl font-bold text-gray-900">
-                Integrity Care Connection
-              </h1>
-              <h2 className="text-sm font-bold text-gray-900">
-                Healing • Hope • Recovery
-              </h2>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

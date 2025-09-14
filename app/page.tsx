@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Heart,
-  Shield,
-  Users,
-  Phone,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
+import { Heart, Shield, Users, ArrowRight, CheckCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -56,14 +49,14 @@ export default function Home() {
                     className="text-green-500 mr-2"
                     size={16}
                   />
-                  <span>24/7 Crisis Support</span>
+                  <span>Walk-ins Welcome</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle
                     className="text-green-500 mr-2"
                     size={16}
                   />
-                  <span>Licensed Professionals</span>
+                  <span>Dedicated Professionals</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle
@@ -76,28 +69,15 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <div className="text-center space-y-6">
-                  <div className="w-24 h-24 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto">
-                    <Heart
-                      className="text-brand-blue"
-                      size={40}
-                    />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    Crisis Support
-                  </h3>
-                  <p className="text-gray-600">
-                    If you or someone you know is in crisis, we're here to help
-                    24/7.
-                  </p>
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <div className="flex items-center justify-center space-x-2 text-red-700 font-semibold">
-                      <Phone size={20} />
-                      <span>Emergency: (555) 123-4567</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <Image
+                  src="/hands.jpg"
+                  alt="Two hands clasped together, symbolizing support and connection"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -203,10 +183,10 @@ export default function Home() {
                   />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">
-                      Licensed Professionals
+                      Dedicated Professionals
                     </h3>
                     <p className="text-gray-600">
-                      Our team includes licensed therapists, counselors, and
+                      Our team includes dedicated therapists, counselors, and
                       medical professionals with specialized training in
                       addiction and mental health.
                     </p>

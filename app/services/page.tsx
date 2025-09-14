@@ -7,22 +7,204 @@ import {
   Activity,
   Phone,
   CheckCircle,
+  User,
+  Users2,
+  Home,
+  Sparkles,
+  BookOpen,
+  Apple,
+  Lightbulb,
+  HandHeart,
+  MapPin,
+  ClipboardList,
+  Hospital,
+  Gamepad2,
+  AlertTriangle,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
   const services = [
     {
+      icon: User,
+      title: "Individual Therapy",
+      description:
+        "One-on-one counseling sessions tailored to address personal mental health and addiction challenges",
+      features: [
+        "Personalized treatment plans",
+        "Cognitive Behavioral Therapy (CBT)",
+        "Dialectical Behavior Therapy (DBT)",
+        "Trauma-informed care",
+        "Crisis intervention support",
+      ],
+      color: "blue",
+    },
+    {
+      icon: Users2,
+      title: "Group Therapy",
+      description:
+        "Therapeutic group sessions providing peer support and shared healing experiences",
+      features: [
+        "Peer support and connection",
+        "Shared experiences and insights",
+        "Social skills development",
+        "Group dynamics exploration",
+        "Collective healing process",
+      ],
+      color: "green",
+    },
+    {
+      icon: Home,
+      title: "Family Therapy",
+      description:
+        "Comprehensive family support to heal relationships and strengthen family bonds",
+      features: [
+        "Family communication skills",
+        "Conflict resolution strategies",
+        "Education about addiction and mental health",
+        "Recovery planning for families",
+        "Healing family dynamics",
+      ],
+      color: "purple",
+    },
+    {
+      icon: Sparkles,
+      title: "Spiritual Acceptance Therapy",
+      description:
+        "Integrating spiritual and mindfulness practices into the healing journey",
+      features: [
+        "Mindfulness and meditation",
+        "Spiritual exploration",
+        "Acceptance and commitment therapy",
+        "Values clarification",
+        "Inner peace and healing",
+      ],
+      color: "indigo",
+    },
+    {
+      icon: BookOpen,
+      title: "Life Skills Mentoring",
+      description:
+        "Practical life skills training to support successful recovery and independent living",
+      features: [
+        "Job readiness and career planning",
+        "Financial management skills",
+        "Time management and organization",
+        "Communication and social skills",
+        "Problem-solving strategies",
+      ],
+      color: "orange",
+    },
+    {
+      icon: Brain,
+      title: "Psychosocial/Educational",
+      description:
+        "Educational programs to understand mental health, addiction, and recovery processes",
+      features: [
+        "Mental health education",
+        "Addiction science and recovery",
+        "Coping strategies and techniques",
+        "Relapse prevention education",
+        "Wellness and self-care practices",
+      ],
+      color: "red",
+    },
+    {
+      icon: Apple,
+      title: "Health Nutrition Fitness",
+      description:
+        "Holistic wellness approach focusing on physical health, nutrition, and fitness",
+      features: [
+        "Nutritional counseling and planning",
+        "Physical fitness programs",
+        "Health and wellness education",
+        "Stress management techniques",
+        "Lifestyle modification support",
+      ],
+      color: "green",
+    },
+    {
+      icon: Lightbulb,
+      title: "Mental Clarity Sessions",
+      description:
+        "Specialized sessions to improve cognitive function, focus, and mental clarity",
+      features: [
+        "Cognitive enhancement techniques",
+        "Memory and concentration training",
+        "Decision-making skills",
+        "Mental fog reduction",
+        "Clarity and focus improvement",
+      ],
+      color: "blue",
+    },
+    {
+      icon: HandHeart,
+      title: "Peer Support Sessions",
+      description:
+        "Peer-led support groups providing encouragement and shared experiences",
+      features: [
+        "Peer mentorship programs",
+        "Shared recovery experiences",
+        "Mutual support and encouragement",
+        "Community building",
+        "Role modeling and inspiration",
+      ],
+      color: "purple",
+    },
+    {
+      icon: MapPin,
+      title: "Individual/Group Outings",
+      description:
+        "Therapeutic recreational activities and outings to build social connections",
+      features: [
+        "Community integration activities",
+        "Social skills practice",
+        "Recreational therapy",
+        "Team building exercises",
+        "Healthy leisure activities",
+      ],
+      color: "orange",
+    },
+    {
+      icon: ClipboardList,
+      title: "Case Management",
+      description:
+        "Comprehensive case management to coordinate care and support services",
+      features: [
+        "Care coordination and planning",
+        "Resource connection and referrals",
+        "Progress monitoring and tracking",
+        "Advocacy and support",
+        "Treatment plan coordination",
+      ],
+      color: "indigo",
+    },
+    {
+      icon: Hospital,
+      title: "Partial Hospitalization",
+      description:
+        "Intensive day treatment program providing structured care without overnight stays",
+      features: [
+        "Daily structured programming",
+        "Medical and psychiatric oversight",
+        "Individual and group therapy",
+        "Medication management",
+        "Family involvement and support",
+      ],
+      color: "red",
+    },
+    {
       icon: Shield,
       title: "Substance Abuse Treatment",
       description:
-        "Comprehensive treatment for alcohol, drug, and prescription medication addiction",
+        "Comprehensive treatment for alcohol, drug, gambling, and prescription medication addiction",
       features: [
         "Medically supervised detoxification",
         "Individual and group therapy",
         "Medication-assisted treatment (MAT)",
+        "Gambling addiction treatment",
         "Relapse prevention planning",
-        "Aftercare and ongoing support",
       ],
       color: "blue",
     },
@@ -30,29 +212,15 @@ export default function Services() {
       icon: Heart,
       title: "Mental Health Services",
       description:
-        "Professional counseling and therapy for various mental health conditions",
+        "Professional treatment for anxiety, depression, PTSD, and other mental health conditions",
       features: [
-        "Individual therapy sessions",
-        "Cognitive Behavioral Therapy (CBT)",
-        "Dialectical Behavior Therapy (DBT)",
-        "Trauma-informed care",
-        "Crisis intervention",
+        "Anxiety and depression treatment",
+        "PTSD and trauma therapy",
+        "Disruptive behavior interventions",
+        "Dissocial disorder treatment",
+        "Crisis intervention support",
       ],
       color: "green",
-    },
-    {
-      icon: Users,
-      title: "Family Support Programs",
-      description:
-        "Comprehensive support for families affected by addiction and mental health issues",
-      features: [
-        "Family therapy sessions",
-        "Educational workshops",
-        "Support groups",
-        "Communication skills training",
-        "Recovery planning for families",
-      ],
-      color: "purple",
     },
     {
       icon: Brain,
@@ -61,26 +229,12 @@ export default function Services() {
         "Specialized care for co-occurring substance abuse and mental health disorders",
       features: [
         "Integrated treatment approach",
+        "Co-occurring illness management",
         "Coordinated care planning",
         "Specialized therapy modalities",
-        "Medication management",
         "Comprehensive assessment",
       ],
       color: "indigo",
-    },
-    {
-      icon: Activity,
-      title: "Intensive Outpatient Program (IOP)",
-      description:
-        "Structured treatment program for those who need more support than traditional outpatient care",
-      features: [
-        "3-5 sessions per week",
-        "Group and individual therapy",
-        "Life skills training",
-        "Peer support groups",
-        "Flexible scheduling",
-      ],
-      color: "orange",
     },
     {
       icon: Pill,
@@ -89,10 +243,10 @@ export default function Services() {
         "Professional medication management for mental health and addiction treatment",
       features: [
         "Psychiatric evaluation",
-        "Medication assessment",
-        "Ongoing monitoring",
+        "Medication assessment and monitoring",
         "Side effect management",
         "Collaboration with therapists",
+        "Ongoing medication optimization",
       ],
       color: "red",
     },
@@ -102,9 +256,9 @@ export default function Services() {
     const colorMap = {
       blue: "bg-brand-blue/10 text-brand-blue",
       green: "bg-brand-gold/10 text-brand-gold",
-      purple: "bg-brand-gold/10 text-brand-gold",
-      indigo: "bg-brand-blue/10 text-brand-blue",
-      orange: "bg-brand-gold/10 text-brand-gold",
+      purple: "bg-purple-100 text-purple-600",
+      indigo: "bg-indigo-100 text-indigo-600",
+      orange: "bg-orange-100 text-orange-600",
       red: "bg-red-100 text-red-600",
     };
     return (
