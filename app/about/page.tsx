@@ -18,6 +18,7 @@ import fatthiImage from "./images/fatthi.webp";
 import erinImage from "./images/erin.webp";
 import shannonImage from "./images/shannon.webp";
 import ometrisImage from "./images/ometris.webp";
+import georgeImage from "./images/george.jpg";
 
 export default function About() {
   const teamMembers = [
@@ -40,13 +41,14 @@ export default function About() {
       bio: "Erin has been involved in the healthcare field for over 35 years. With a major emphasis on Revenue Cycle Management functions, Erin has assisted in opening 131 outpatient clinics in 27 states, over the years and continues to help providers with all service needs. Erin has been in management positions for the bulk of her career and has worked in a variety of settings including hospitals, SNF's, CCRC communities and behavioral health entities. Erin has worked in the behavioral health field for the last 15 years and has served as a Lead Behavioral Health Technician, a BHT Supervisor and leads group counseling, individual counseling, one on one sessions and mentor sessions for women, under the direction of Licensed Professional Counselors or other Licensed Professional Staff. Erin truly cares about our clients and helping them achieve their goals of attaining sobriety, regaining their independence and getting back to leading full, active, sober, productive lives.\n\nErin has three adult sons and four grandchildren. In her free time, she enjoys doing any thing outdoors, cooking, baking, reading and hanging out with her dog.",
     },
     {
-      name: "Shannon Riley",
-      title: "Operations Manager",
+      name: "George Hutchins",
+      title: "Director of Operations",
       credentials: "",
-      specialty: "Operations & Coordination",
+      specialty: "Peer support specialist & recovery mentor",
       experience: "10+ years",
-      image: shannonImage,
-      bio: "Shannon Riley has been in the health care field for 27 years. Working most of those years in the medical field, with 5 of those years in the Behavioral Health genera. With in that time frame she has been a client favorite as a behavioral health technician, for the past 2 years she has served as Behavioral Health Director. In the past year and half addition to her Behavioral Health Director duties Shannon has been learning the Operational aspects of operating an outpatient behavioral health clinic. In her role as Operations Manager for Integrity Care Connection, she will be providing operations management as well as supervision for behavioral health staff. In her free time, Shannon likes to be outside exploring Portland and surrounding areas. Shannon has two daughters one who is a Direct Support Aide for at risk individuals and Shannon's second daughter tends to keep the family busy with her school activities and events.",
+      image: georgeImage,
+      bio: "George Hutchins serves as the Director of Operations at our treatment center, bringing both professional expertise and the perspective of someone who has walked the path of recovery. With years of sobriety and certifications as a Peer Support Specialist in multiple states, along with a Recovery Mentor certification, George understands firsthand the challenges of addiction—and the hope that comes from overcoming them.\n\nGeorge works closely with clients through one-on-one mentoring, group sessions, and supportive counseling under the guidance of licensed professionals. He believes in meeting each person where they are, helping them rebuild their lives, restore relationships, and move toward full, productive, sober living.\n\nA devoted father of four daughters and a son, George values family, connection, and community. Outside of work, he enjoys spending time outdoors, reading, and sharing moments with loved ones. His dedication to recovery and helping others succeed is at the heart of everything he does, inspiring both clients and colleagues alike. ",
+
     },
     {
       name: "Dr. Ometris King",
