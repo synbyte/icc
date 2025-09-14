@@ -116,9 +116,9 @@ export default function Footer() {
                   className="text-brand-gold mt-1"
                 />
                 <span className="text-gray-300">
-                  123 Recovery Street
+                  815 SW 2nd Ave Suite 200
                   <br />
-                  Hope City, HC 12345
+                  Portland, Oregon 97204
                 </span>
               </div>
               <div className="flex items-center space-x-2">
