@@ -55,7 +55,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Recovery Street", "Hope City, HC 12345"],
+      details: ["815 SW 2nd Ave Suite 200", "Portland, Oregon 97204"],
       action: "https://maps.google.com",
     },
     {
@@ -389,7 +389,7 @@ export default function Contact() {
                   />
                   <p className="text-gray-600">Interactive Map</p>
                   <p className="text-sm text-gray-500">
-                    123 Recovery Street, Hope City, HC 12345
+                    815 SW 2nd Ave Suite 200, Portland, Oregon 97204
                   </p>
                 </div>
               </div>
