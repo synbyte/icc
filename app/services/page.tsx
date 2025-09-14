@@ -23,6 +23,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
@@ -269,27 +270,60 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-blue/5 to-brand-gold/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="text-brand-blue">Services</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We provide comprehensive, evidence-based treatment services
-              designed to address substance abuse and mental health challenges
-              with compassion, expertise, and personalized care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <section className="relative minn-h-screen flex items-center overflow-hidden">
+        {/* Background image with right-to-left fade */}
+        <div className="absolute inset-0">
+          <Image
+            src="/logo_notext.png"
+            alt="Integrity Care Connection logo"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+        </div>
+
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/80 to-brand-gold/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center min-h-[80vh] flex flex-col justify-center">
+            {/* Main Headline */}
+            <div className="space-y-6 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+                Our{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                  Services
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+                We provide comprehensive, evidence-based treatment services
+                designed to address substance abuse and mental health challenges
+                with{" "}
+                <span className="text-brand-gold font-semibold">
+                  compassion, expertise, and personalized care.
+                </span>
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="/contact"
-                className="bg-brand-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200"
+                className="group bg-brand-gold text-brand-blue px-8 py-4 rounded-2xl text-lg font-bold hover:bg-brand-gold-light transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
               >
                 Schedule a Consultation
               </Link>
               <a
                 href="tel:5551234567"
-                className="border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-brand-blue/5 transition-colors duration-200"
+                className="group border-2 border-white/30 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
               >
                 Call (555) 123-4567
               </a>

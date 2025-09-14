@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -124,17 +125,48 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-blue/5 to-brand-gold/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Contact <span className="text-brand-blue">Us</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We're here to help you take the first step towards recovery.
-              Contact us today to learn more about our services or to schedule a
-              consultation.
-            </p>
+      <section className="relative minn-h-screen flex items-center overflow-hidden">
+        {/* Background image with right-to-left fade */}
+        <div className="absolute inset-0">
+          <Image
+            src="/logo_notext.png"
+            alt="Integrity Care Connection logo"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+        </div>
+
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/80 to-brand-gold/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center min-h-[80vh] flex flex-col justify-center">
+            {/* Main Headline */}
+            <div className="space-y-6 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+                Contact{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                  Us
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+                We're here to help you take the first step towards recovery.
+                Contact us today to learn more about our services or to
+                <span className="text-brand-gold font-semibold">
+                  {" "}
+                  schedule a consultation.
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>

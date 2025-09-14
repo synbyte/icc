@@ -18,7 +18,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/30 backdrop-blur-md shadow-lg sticky top-0 z-50">
+    <nav className="bg-white/60 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-brand-gold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -42,14 +42,14 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-brand-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-brand-blue hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-brand-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-brand-blue-dark transition-colors duration-200"
+              className="bg-linear-to-t from-brand-blue to-brand-blue/70 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-blue-dark transition-all duration-200 shadow-md shadow-brand-blue/50 hover:shadow-sm"
             >
               Get Help Now
             </Link>

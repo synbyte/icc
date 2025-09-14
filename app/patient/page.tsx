@@ -11,6 +11,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PatientPortal() {
   const resources = [
@@ -99,22 +100,56 @@ export default function PatientPortal() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-blue/5 to-brand-gold/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Patient <span className="text-brand-blue">Portal</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Access your treatment information, schedule appointments, and
-              connect with resources to support your recovery journey.
-            </p>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center space-x-2 text-yellow-800">
-                <AlertCircle size={20} />
-                <span className="font-semibold">Portal Login Required</span>
+      <section className="relative minn-h-screen flex items-center overflow-hidden">
+        {/* Background image with right-to-left fade */}
+        <div className="absolute inset-0">
+          <Image
+            src="/logo_notext.png"
+            alt="Integrity Care Connection logo"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+        </div>
+
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/80 to-brand-gold/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center min-h-[80vh] flex flex-col justify-center">
+            {/* Main Headline */}
+            <div className="space-y-6 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+                Patient{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                  Portal
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+                Access your treatment information, schedule appointments, and
+                connect with resources to support your
+                <span className="text-brand-gold font-semibold">
+                  {" "}
+                  recovery journey.
+                </span>
+              </p>
+            </div>
+
+            {/* Portal Access Notice */}
+            <div className="bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 rounded-2xl p-6 max-w-2xl mx-auto mb-8">
+              <div className="flex items-center justify-center space-x-3 text-yellow-100 mb-3">
+                <AlertCircle size={24} />
+                <span className="font-bold text-lg">Portal Login Required</span>
               </div>
-              <p className="text-yellow-700 text-sm mt-2">
+              <p className="text-yellow-100/90 text-sm">
                 Please contact our office to set up your patient portal access.
               </p>
             </div>

@@ -6,78 +6,135 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-blue/5 to-brand-gold/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+      <section className="relative minn-h-screen flex items-center overflow-hidden shadow-2xl shadow-brand-blue/50 py-10 lg:py-0">
+        {/* Background image with right-to-left fade */}
+        <div className="absolute inset-0">
+          <Image
+            src="/hands.jpg"
+            alt="Two hands clasped together, symbolizing support and connection"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+        </div>
+
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/80 to-brand-gold/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center min-h-[80vh]">
+            {/* Content */}
+            <div className="space-y-8 text-white max-w-4xl">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <Heart
+                  className="text-brand-gold mr-2"
+                  size={16}
+                />
+                <span className="text-sm font-medium">
+                  Compassionate Care Since 2025
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight">
                   Your Journey to
-                  <span className="text-brand-blue"> Recovery</span>
-                  <br />
-                  Starts Here
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                    Recovery
+                  </span>
+                  <span className="block text-4xl md:text-5xl font-light">
+                    Starts Here
+                  </span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  At Integrity Care Connection, we provide compassionate,
-                  evidence-based treatment for substance abuse and mental health
-                  challenges. Your healing and recovery are our top priorities.
+
+                <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                  Compassionate, evidence-based treatment for substance abuse
+                  and mental health challenges.
+                  <span className="text-brand-gold font-semibold">
+                    {" "}
+                    Your healing is our priority.
+                  </span>
                 </p>
               </div>
 
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="bg-brand-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200 flex items-center justify-center"
+                  className="group bg-brand-gold text-brand-blue px-8 py-4 rounded-2xl text-lg font-bold hover:bg-brand-gold-light transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
                 >
                   Get Help Now
                   <ArrowRight
-                    className="ml-2"
+                    className="ml-2 group-hover:translate-x-1 transition-transform"
                     size={20}
                   />
                 </Link>
                 <Link
                   href="/programs"
-                  className="border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-brand-blue/5 transition-colors duration-200 flex items-center justify-center"
+                  className="group border-2 border-white/30 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
                 >
-                  Our Programs
+                  Explore Programs
                 </Link>
               </div>
 
-              <div className="flex items-center space-x-6 text-sm text-gray-600">
-                <div className="flex items-center">
-                  <CheckCircle
-                    className="text-green-500 mr-2"
-                    size={16}
-                  />
-                  <span>Walk-ins Welcome</span>
+              {/* Trust Indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/20">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                    <CheckCircle
+                      className="text-brand-gold"
+                      size={20}
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">
+                      Walk-ins Welcome
+                    </div>
+                    <div className="text-white/70 text-sm">
+                      No appointment needed
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <CheckCircle
-                    className="text-green-500 mr-2"
-                    size={16}
-                  />
-                  <span>Dedicated Professionals</span>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                    <CheckCircle
+                      className="text-brand-gold"
+                      size={20}
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">
+                      Dedicated Professionals
+                    </div>
+                    <div className="text-white/70 text-sm">
+                      Experienced & Trained
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <CheckCircle
-                    className="text-green-500 mr-2"
-                    size={16}
-                  />
-                  <span>Insurance Accepted</span>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                    <CheckCircle
+                      className="text-brand-gold"
+                      size={20}
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">
+                      Insurance Accepted
+                    </div>
+                    <div className="text-white/70 text-sm">
+                      Most major plans
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <Image
-                  src="/hands.jpg"
-                  alt="Two hands clasped together, symbolizing support and connection"
-                  width={500}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
               </div>
             </div>
           </div>
@@ -85,11 +142,12 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Care for Your Recovery
+              Comprehensive Care for Your{" "}
+              <span className="text-brand-gold">Recovery</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We offer a full spectrum of evidence-based treatments designed to
@@ -99,7 +157,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield
                   className="text-brand-blue"
@@ -116,7 +174,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart
                   className="text-brand-gold"
@@ -132,7 +190,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow duration-200">
+            <div className="text-center p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200">
               <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users
                   className="text-brand-gold"
@@ -152,12 +210,16 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Integrity Care Connection?
+                Why Choose{" "}
+                <span className="text-brand-blue">
+                  Integrity Care Connection
+                </span>
+                ?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">

@@ -48,7 +48,6 @@ export default function About() {
       experience: "10+ years",
       image: georgeImage,
       bio: "George Hutchins serves as the Director of Operations at our treatment center, bringing both professional expertise and the perspective of someone who has walked the path of recovery. With years of sobriety and certifications as a Peer Support Specialist in multiple states, along with a Recovery Mentor certification, George understands firsthand the challenges of addiction—and the hope that comes from overcoming them.\n\nGeorge works closely with clients through one-on-one mentoring, group sessions, and supportive counseling under the guidance of licensed professionals. He believes in meeting each person where they are, helping them rebuild their lives, restore relationships, and move toward full, productive, sober living.\n\nA devoted father of four daughters and a son, George values family, connection, and community. Outside of work, he enjoys spending time outdoors, reading, and sharing moments with loved ones. His dedication to recovery and helping others succeed is at the heart of everything he does, inspiring both clients and colleagues alike. ",
-
     },
     {
       name: "Dr. Ometris King",
@@ -95,18 +94,103 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-blue/5 to-brand-gold/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About{" "}
-              <span className="text-brand-blue">Integrity Care Connection</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We are a dedicated team of mental health and addiction treatment
-              professionals committed to providing compassionate, evidence-based
-              care that transforms lives and strengthens communities.
-            </p>
+      <section className="relative minn-h-screen flex items-center overflow-hidden">
+        {/* Background image with right-to-left fade */}
+        <div className="absolute inset-0">
+          <Image
+            src="/logo_notext.png"
+            alt="Integrity Care Connection logo"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60"></div>
+        </div>
+
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/80 to-brand-gold/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center min-h-[80vh] flex flex-col justify-center">
+            {/* Main Headline */}
+            <div className="space-y-6 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white">
+                About{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                  Integrity Care
+                </span>
+                <span className="block text-4xl md:text-5xl font-light">
+                  Connection
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto">
+                We are a dedicated team of mental health and addiction treatment
+                professionals committed to providing compassionate,
+                evidence-based care that{" "}
+                <span className="text-brand-gold font-semibold">
+                  transforms lives and strengthens communities.
+                </span>
+              </p>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                  <Award
+                    className="text-brand-gold"
+                    size={20}
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-white">
+                    Dedicated Professionals
+                  </div>
+                  <div className="text-white/70 text-sm">
+                    Experienced & Trained
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                  <Heart
+                    className="text-brand-gold"
+                    size={20}
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-white">
+                    Evidence-Based Care
+                  </div>
+                  <div className="text-white/70 text-sm">
+                    Proven treatment methods
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                  <Users
+                    className="text-brand-gold"
+                    size={20}
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-white">
+                    Community Focused
+                  </div>
+                  <div className="text-white/70 text-sm">
+                    Strengthening communities
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
