@@ -380,18 +380,15 @@ export default function Contact() {
 
             {/* Map and Additional Info */}
             <div className="space-y-8">
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin
-                    className="text-gray-400 mx-auto mb-4"
-                    size={48}
-                  />
-                  <p className="text-gray-600">Interactive Map</p>
-                  <p className="text-sm text-gray-500">
-                    815 SW 2nd Ave Suite 200, Portland, Oregon 97204
-                  </p>
-                </div>
+              {/* Map */}
+              <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCwuEyPrnPSRtI9Pz64bhfY3tKTS1aBiro&q=815+SW+2nd+Ave+Suite+200,+Portland,+Oregon+97204"
+                  allowFullScreen
+                ></iframe>
               </div>
 
               {/* Emergency Contacts */}
