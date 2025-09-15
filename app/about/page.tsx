@@ -18,7 +18,7 @@ import fatthiImage from "./images/fatthi.webp";
 import erinImage from "./images/erin.webp";
 import shannonImage from "./images/shannon.webp";
 import ometrisImage from "./images/ometris.webp";
-import georgeImage from "./images/george.jpg";
+import georgeImage from "./images/george2.jpg";
 import {cn} from "@/lib/utils";
 
 export default function About() {
