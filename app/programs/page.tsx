@@ -439,6 +439,18 @@ export default function Programs() {
         </div>
       </section>
 
+       {/*Quote */}
+       <section className="py-20 bg-brand-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+          “Sometimes the smallest step in the right direction ends of being the biggest step of your life. Tiptoe if you must, but take the step.”
+          </blockquote>
+          <cite className="text-xl text-white font-semibold">
+            — Naeem Callaway
+          </cite>
+        </div>
+      </section>
+
       {/* Program Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

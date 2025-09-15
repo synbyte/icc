@@ -331,7 +331,17 @@ export default function Services() {
           </div>
         </div>
       </section>
-
+ {/*Quote */}
+ <section className="py-20 bg-brand-gold">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+          “Don’t judge each day by the harvest you reap but by the seeds that you plant.”
+          </blockquote>
+          <cite className="text-xl text-white font-semibold">
+            — Robert Louis Stevenson
+          </cite>
+        </div>
+      </section>
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
