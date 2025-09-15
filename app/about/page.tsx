@@ -95,7 +95,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden">
+      <section className="relative minn-h-screen flex items-center overflow-hidden py-10 lg:py-0">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
