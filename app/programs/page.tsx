@@ -965,8 +965,8 @@ export default function Programs() {
                       Experienced Professionals
                     </h3>
                     <p className="text-gray-600">
-                      Our team includes licensed therapists, counselors, and
-                      medical professionals with specialized training in
+                      Our team includes therapists, certified counselors, and
+                      medical professionals with years of lived experience and specialized training in
                       addiction and mental health.
                     </p>
                   </div>
