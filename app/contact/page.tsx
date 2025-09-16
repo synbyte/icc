@@ -90,29 +90,29 @@ export default function Contact() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="max-w-md mx-auto text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="flex justify-center items-center min-h-screen bg-gray-50">
+        <div className="mx-auto max-w-md text-center">
+          <div className="p-8 bg-white rounded-2xl shadow-xl">
+            <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 bg-green-100 rounded-full">
               <CheckCircle
                 className="text-green-600"
                 size={32}
               />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="mb-4 text-2xl font-bold text-gray-900">
               Thank You!
             </h1>
-            <p className="text-gray-600 mb-6">
+            <p className="mb-6 text-gray-600">
               Your message has been received. We'll get back to you within 24
               hours.
             </p>
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="mb-6 text-sm text-gray-500">
               If this is an emergency, please call our crisis line at (555)
               123-4567.
             </p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200"
+              className="px-6 py-3 font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
             >
               Send Another Message
             </button>
@@ -125,7 +125,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden">
+      <section className="flex overflow-hidden relative items-center minn-h-screen">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
@@ -143,25 +143,25 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+        <div className="absolute left-10 top-20 w-32 h-32 rounded-full blur-xl animate-pulse bg-white/10"></div>
+        <div className="absolute right-10 bottom-20 w-48 h-48 rounded-full blur-2xl delay-1000 animate-pulse bg-brand-gold/20"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full blur-lg delay-500 animate-pulse bg-white/5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative px-4 mx-auto w-full max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 Contact{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-500 from-brand-gold">
                   Us
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed duration-1000 md:text-2xl text-white/90 animate-in fade-in slide-in-from-bottom">
                 We're here to help you take the first step towards recovery.
                 Contact us today to learn more about our services or to
-                <span className="text-brand-gold font-semibold">
+                <span className="font-semibold text-brand-gold">
                   {" "}
                   schedule a consultation.
                 </span>
@@ -173,20 +173,20 @@ export default function Contact() {
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="text-center p-8 rounded-xl hover:shadow-lg transition-shadow duration-200"
+                className="p-8 text-center rounded-xl transition-shadow duration-200 hover:shadow-lg"
               >
-                <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-blue/10">
                   <info.icon
                     className="text-brand-blue"
                     size={32}
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   {info.title}
                 </h3>
                 <div className="space-y-2">
@@ -198,7 +198,7 @@ export default function Contact() {
                       {info.action && detailIndex === 0 ? (
                         <a
                           href={info.action}
-                          className="hover:text-brand-blue transition-colors duration-200"
+                          className="transition-colors duration-200 hover:text-brand-blue"
                         >
                           {detail}
                         </a>
@@ -216,22 +216,22 @@ export default function Contact() {
 
       {/* Contact Form & Map */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="p-8 bg-white rounded-2xl shadow-xl">
+              <h2 className="mb-6 text-3xl font-bold text-gray-900">
                 Send Us a Message
               </h2>
               <form
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
                       Full Name *
                     </label>
@@ -242,14 +242,14 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                      className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
                       Email Address *
                     </label>
@@ -260,17 +260,17 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                      className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
                       Phone Number
                     </label>
@@ -280,14 +280,14 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                      className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                       placeholder="(555) 123-4567"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="urgency"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
                       Urgency Level
                     </label>
@@ -296,7 +296,7 @@ export default function Contact() {
                       name="urgency"
                       value={formData.urgency}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                      className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     >
                       <option value="normal">Normal - Within 24 hours</option>
                       <option value="urgent">Urgent - Within 4 hours</option>
@@ -310,7 +310,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block mb-2 text-sm font-medium text-gray-700"
                   >
                     Subject *
                   </label>
@@ -321,7 +321,7 @@ export default function Contact() {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="What can we help you with?"
                   />
                 </div>
@@ -329,7 +329,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="preferredContact"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block mb-2 text-sm font-medium text-gray-700"
                   >
                     Preferred Contact Method
                   </label>
@@ -338,7 +338,7 @@ export default function Contact() {
                     name="preferredContact"
                     value={formData.preferredContact}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="phone">Phone Call</option>
                     <option value="email">Email</option>
@@ -349,7 +349,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block mb-2 text-sm font-medium text-gray-700"
                   >
                     Message *
                   </label>
@@ -360,14 +360,14 @@ export default function Contact() {
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Please tell us how we can help you..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-brand-blue text-white px-6 py-4 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200 flex items-center justify-center"
+                  className="flex justify-center items-center px-6 py-4 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   <Send
                     className="mr-2"
@@ -381,7 +381,7 @@ export default function Contact() {
             {/* Map and Additional Info */}
             <div className="space-y-8">
               {/* Map */}
-              <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center overflow-hidden">
+              <div className="flex overflow-hidden justify-center items-center h-96 bg-gray-200 rounded-2xl">
                 <iframe
                   width="100%"
                   height="100%"
@@ -392,8 +392,8 @@ export default function Contact() {
               </div>
 
               {/* Emergency Contacts */}
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="p-8 bg-red-50 rounded-2xl border border-red-200">
+                <h3 className="mb-6 text-2xl font-bold text-gray-900">
                   Emergency Contacts
                 </h3>
                 <div className="space-y-4">
@@ -403,7 +403,7 @@ export default function Contact() {
                       className="flex items-start space-x-4"
                     >
                       <Phone
-                        className="text-red-600 mt-1"
+                        className="mt-1 text-red-600"
                         size={20}
                       />
                       <div>
@@ -412,7 +412,7 @@ export default function Contact() {
                         </h4>
                         <a
                           href={`tel:${contact.number.replace(/[^0-9]/g, "")}`}
-                          className="text-red-600 font-bold text-lg hover:underline"
+                          className="text-lg font-bold text-red-600 hover:underline"
                         >
                           {contact.number}
                         </a>
@@ -426,33 +426,30 @@ export default function Contact() {
               </div>
 
               {/* Office Hours */}
-              <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="p-8 rounded-2xl border bg-brand-blue/5 border-brand-blue/20">
+                <h3 className="mb-6 text-2xl font-bold text-gray-900">
                   Office Hours
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="text-gray-600">Administrative Hours</span>
                     <span className="font-semibold text-gray-900">
-                      8:00 AM - 8:00 PM
+                      Monday-Friday 8:00 AM - 5:00 PM
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
+                    <span className="text-gray-600">Clinic Hours</span>
                     <span className="font-semibold text-gray-900">
-                      9:00 AM - 5:00 PM
+                      Monday-Friday 8:30 AM - 4:30 PM
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-semibold text-gray-900">
-                      Emergency Only
-                    </span>
+                    <span className="text-gray-600">Evening and Weekend Hours By Appointment</span>
+                   
                   </div>
-                  <div className="mt-4 p-4 bg-yellow-100 rounded-lg">
+                  <div className="p-4 mt-4 bg-red-100 rounded-lg">
                     <p className="text-sm text-yellow-800">
-                      <strong>Note:</strong> Crisis support is available 24/7.
-                      For emergencies, call (555) 123-4567.
+                      <strong>24/7 Crisis Support:</strong> Call 555-555-1212
                     </p>
                   </div>
                 </div>
@@ -464,24 +461,24 @@ export default function Contact() {
 
       {/* Call to Action */}
       <section className="py-20 bg-brand-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="px-4 mx-auto max-w-7xl text-center sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             Ready to Start Your Recovery Journey?
           </h2>
-          <p className="text-xl text-brand-blue/80 mb-8 max-w-3xl mx-auto">
+          <p className="mx-auto mb-8 max-w-3xl text-xl text-brand-blue/80">
             Don't wait to get the help you need. Contact us today to schedule a
             consultation or learn more about our treatment programs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center sm:flex-row">
             <a
               href="tel:5551234567"
-              className="bg-white text-brand-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold bg-white rounded-lg transition-colors duration-200 text-brand-blue hover:bg-gray-100"
             >
               Call (555) 123-4567
             </a>
             <a
               href="mailto:info@integritycareconnection.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-brand-blue transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold text-white rounded-lg border-2 border-white transition-colors duration-200 hover:bg-white hover:text-brand-blue"
             >
               Email Us
             </a>

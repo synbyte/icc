@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="text-white bg-gray-900">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="Integrity Care Connection"
                 width={40}
                 height={40}
-                className="h-10 w-auto"
+                className="w-auto h-10"
               />
               <div>
                 <h3 className="text-lg font-bold">Integrity Care Connection</h3>
@@ -24,7 +24,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className="text-sm text-gray-300">
               Providing compassionate, evidence-based treatment for substance
               abuse and mental health challenges.
             </p>
@@ -32,12 +32,12 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="mb-4 text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/services"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   Services
                 </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/programs"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   Programs
                 </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   About Us
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/patient"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   Patient Portal
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 transition-colors hover:text-white"
                 >
                   Contact
                 </Link>
@@ -79,10 +79,10 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+            <h4 className="mb-4 text-lg font-semibold">Our Services</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Substance Abuse Treatment</li>
-              <li>Mental Health Counseling</li>
+              <li>Behvaioral/Mental Health Counseling</li>
               <li>Individual Therapy</li>
               <li>Group Therapy</li>
               <li>Family Support</li>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Information</h4>
+            <h4 className="mb-4 text-lg font-semibold">Contact Information</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone
@@ -113,7 +113,7 @@ export default function Footer() {
               <div className="flex items-start space-x-2">
                 <MapPin
                   size={16}
-                  className="text-brand-gold mt-1"
+                  className="mt-1 text-brand-gold"
                 />
                 <span className="text-gray-300">
                   815 SW 2nd Ave Suite 200
@@ -133,21 +133,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+        <div className="pt-8 mt-8 border-t border-gray-800">
+          <div className="flex flex-col justify-between items-center md:flex-row">
+            <p className="text-sm text-gray-400">
               © 2024 Integrity Care Connection. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex mt-4 space-x-6 md:mt-0">
               <Link
                 href="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-sm text-gray-400 transition-colors hover:text-white"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-sm text-gray-400 transition-colors hover:text-white"
               >
                 Terms of Service
               </Link>

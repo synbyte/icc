@@ -159,7 +159,7 @@ export default function Programs() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden">
+      <section className="flex overflow-hidden relative items-center minn-h-screen">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
@@ -177,27 +177,27 @@ export default function Programs() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+        <div className="absolute left-10 top-20 w-32 h-32 rounded-full blur-xl animate-pulse bg-white/10"></div>
+        <div className="absolute right-10 bottom-20 w-48 h-48 rounded-full blur-2xl delay-1000 animate-pulse bg-brand-gold/20"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full blur-lg delay-500 animate-pulse bg-white/5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative px-4 mx-auto w-full max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 Our{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-500 from-brand-gold">
                   Programs
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed duration-1000 md:text-2xl text-white/90 animate-in fade-in slide-in-from-bottom">
                 Our mission is to provide education, counseling, tools and
                 support necessary for our patient/clients to achieve sobriety,
                 self-reliance from addictive behaviors, and the ability to live
                 a
-                <span className="text-brand-gold font-semibold">
+                <span className="font-semibold text-brand-gold">
                   {" "}
                   healthy, productive, sober life.
                 </span>
@@ -205,16 +205,16 @@ export default function Programs() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
               <Link
                 href="/contact"
-                className="group bg-brand-gold text-brand-blue px-8 py-4 rounded-2xl text-lg font-bold hover:bg-brand-gold-light transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
+                className="flex justify-center items-center px-8 py-4 text-lg font-bold rounded-2xl transition-all duration-300 transform group bg-brand-gold text-brand-blue hover:bg-brand-gold-light hover:scale-105 hover:shadow-2xl"
               >
                 Get Started Today
               </Link>
               <a
                 href="tel:5551234567"
-                className="group border-2 border-white/30 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+                className="flex justify-center items-center px-8 py-4 text-lg font-semibold text-white rounded-2xl border-2 backdrop-blur-sm transition-all duration-300 group border-white/30 hover:bg-white/10 hover:border-white/50"
               >
                 Call (555) 123-4567
               </a>
@@ -225,13 +225,13 @@ export default function Programs() {
 
       {/* Program Description */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
               Our Comprehensive Approach
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-600 mb-6">
+            <div className="mx-auto max-w-4xl">
+              <p className="mb-6 text-lg text-gray-600">
                 The mission, goal and purpose of Integrity Care Connections
                 LLC's program is to provide education, counseling, tools and
                 support necessary for our patient/clients to achieve sobriety,
@@ -239,7 +239,7 @@ export default function Programs() {
                 behavioral/mental health issues and the ability to live a
                 healthy, productive, sober life.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="mb-6 text-lg text-gray-600">
                 We do this by ensuring our outpatient treatment center is a
                 welcoming, safe, comfortable and accepting environment that
                 allows each individual to focus on their own healing journey
@@ -256,15 +256,15 @@ export default function Programs() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-3">
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="flex justify-center items-center mx-auto mb-4 w-16 h-16 rounded-full bg-brand-blue/10">
                 <Heart
                   className="text-brand-blue"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-xl font-semibold text-gray-900">
                 Welcoming Environment
               </h3>
               <p className="text-gray-600">
@@ -272,13 +272,13 @@ export default function Programs() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="flex justify-center items-center mx-auto mb-4 w-16 h-16 rounded-full bg-brand-gold/10">
                 <Shield
                   className="text-brand-gold"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-xl font-semibold text-gray-900">
                 Dedicated Staff
               </h3>
               <p className="text-gray-600">
@@ -286,13 +286,13 @@ export default function Programs() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="flex justify-center items-center mx-auto mb-4 w-16 h-16 rounded-full bg-brand-blue/10">
                 <Target
                   className="text-brand-blue"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-xl font-semibold text-gray-900">
                 Holistic Approach
               </h3>
               <p className="text-gray-600">
@@ -305,93 +305,79 @@ export default function Programs() {
 
       {/* Care Coordination */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
               Care Coordination
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive admission process ensuring whole-person care
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
+            ICC works with community partners and industry professionals to coordinate care for every client, making sure each individual’s needs are met. From our comprehensive admissions process, we focus on providing whole-person care.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="mb-6 text-2xl font-bold text-gray-900">
                 Thorough Admission Process
               </h3>
               <div className="space-y-4">
+                
                 <div className="flex items-start space-x-3">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={20}
                   />
-                  <div>
+                  <div className="max-w-lg">
                     <h4 className="font-semibold text-gray-900">
-                      Intake Paperwork
+                      Intake/Behavioral Health Assessment
                     </h4>
                     <p className="text-gray-600">
-                      Complete admission documentation and assessments
+                    The intake process comprises a thorough patient history and behavioral health assessment based in part on ASAM Level Criteria to ensure that each individual's programming is tailored to their unique needs. Utilizing ASAM Criteria, each person will be recommended for the program that will best suit their condition and need.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={20}
                   />
-                  <div>
+                  <div className="max-w-lg">
                     <h4 className="font-semibold text-gray-900">
-                      Behavioral Health Assessment
+                      Initial and Ongoing Treatment Planning
                     </h4>
                     <p className="text-gray-600">
-                      Comprehensive evaluation by licensed professionals
+                    An initial treatment plan is created upon completion of the intake paperwork and behavioral health assessment and is reviewed and approved by our licensed staff. Treatment plans are reviewed monthly and are revised to ensure the individual's treatment evolves with the individual as they progress in programming.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={20}
                   />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">
-                      Initial Treatment Plan
-                    </h4>
-                    <p className="text-gray-600">
-                      Personalized plan approved by medical and mental health
-                      professionals
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle
-                    className="text-green-500 mt-1"
-                    size={20}
-                  />
-                  <div>
+                  <div className="max-w-lg">
                     <h4 className="font-semibold text-gray-900">
                       Medical Evaluation
                     </h4>
                     <p className="text-gray-600">
-                      Complete physical with metabolic blood workup by Medical
-                      Director
+                      Complete physical with metabolic blood workup as recommended by our Medical
+                      Director, who also oversees our Medication Assisted Treatment (MAT) services.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
               <div className="flex items-center mb-6">
                 <Stethoscope
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={32}
                 />
                 <h3 className="text-2xl font-bold text-gray-900">
                   Community Partnerships
                 </h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="mb-6 text-gray-600">
                 Our community partnerships ensure that our patient/clients have
                 access to the services they need that will best assist them with
                 attaining their holistic health goals.
@@ -441,11 +427,11 @@ export default function Programs() {
 
        {/*Quote */}
        <section className="py-20 bg-brand-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+        <div className="px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+          <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
           “Sometimes the smallest step in the right direction ends of being the biggest step of your life. Tiptoe if you must, but take the step.”
           </blockquote>
-          <cite className="text-xl text-white font-semibold">
+          <cite className="text-xl font-semibold text-white">
             — Naeem Callaway
           </cite>
         </div>
@@ -453,30 +439,30 @@ export default function Programs() {
 
       {/* Program Services */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
               Program Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Comprehensive treatment modalities designed to combat addictive
               behaviors from all perspectives
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Individual Therapy */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <UserCheck
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Individual Therapy
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Weekly individual treatment sessions ensuring each person
                 addresses their unique needs and has the opportunity to be heard
                 as an active decision maker in their treatment.
@@ -490,17 +476,17 @@ export default function Programs() {
             </div>
 
             {/* Group Therapy */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Users
-                  className="text-brand-gold mr-3"
+                  className="mr-3 text-brand-gold"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Group Therapy
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Daily group sessions allowing patients to see they're not alone
                 and learn from others' experiences, failures, and successes on
                 their wellness journey.
@@ -514,17 +500,17 @@ export default function Programs() {
             </div>
 
             {/* Family Therapy */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Home
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Family Therapy
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Encouraging reconnection with family in a safe environment,
                 moderated by professional staff to repair damaged bonds and
                 embrace the future as a unit.
@@ -538,17 +524,17 @@ export default function Programs() {
             </div>
 
             {/* Spiritual Acceptance Therapy */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Heart
-                  className="text-brand-gold mr-3"
+                  className="mr-3 text-brand-gold"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Spiritual Acceptance Therapy
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Supporting all patients in their chosen beliefs or lack thereof,
                 with community partnerships providing religious services and
                 culturally specific spiritual needs.
@@ -562,17 +548,17 @@ export default function Programs() {
             </div>
 
             {/* Life Skills Mentoring */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <BookOpen
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Life Skills Mentoring
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Comprehensive life skills instruction covering basic hygiene,
                 cleaning, cooking, appointments, parenting skills, and all
                 facets of everyday living.
@@ -586,17 +572,17 @@ export default function Programs() {
             </div>
 
             {/* PsychoSocial/Educational Counseling */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Lightbulb
-                  className="text-brand-gold mr-3"
+                  className="mr-3 text-brand-gold"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   PsychoSocial/Educational Counseling
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Guidance with resume building, job preparedness, financial
                 counseling, educational needs, and all tools necessary for
                 educational, employment, and financial success.
@@ -610,17 +596,17 @@ export default function Programs() {
             </div>
 
             {/* Health & Nutrition; Fitness */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Activity
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Health & Nutrition; Fitness
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Encouraging physical fitness and proper nutrition through
                 community partnerships with nutritionists and fitness centers,
                 tailored to each individual's wellness journey.
@@ -634,17 +620,17 @@ export default function Programs() {
             </div>
 
             {/* Mental Clarity Sessions */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <Brain
-                  className="text-brand-gold mr-3"
+                  className="mr-3 text-brand-gold"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Mental Clarity Sessions
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Supporting overall brain health through meditation, stretching,
                 yoga, mental exercises, relaxation techniques, and coping skills
                 for mind, body, and spirit.
@@ -658,17 +644,17 @@ export default function Programs() {
             </div>
 
             {/* Peer Support Sessions */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
               <div className="flex items-center mb-4">
                 <HandHeart
-                  className="text-brand-blue mr-3"
+                  className="mr-3 text-brand-blue"
                   size={24}
                 />
                 <h3 className="text-xl font-bold text-gray-900">
                   Peer Support Sessions
                 </h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Sessions led by certified Peer Specialists who speak from lived
                 experiences, providing living proof that substance use and
                 mental health issues can be overcome.
@@ -684,15 +670,15 @@ export default function Programs() {
 
           {/* Additional Services */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            <h3 className="mb-8 text-2xl font-bold text-center text-gray-900">
               Additional Program Services
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="p-6 bg-gray-50 rounded-xl">
+                <h4 className="mb-4 text-xl font-semibold text-gray-900">
                   Individual/Group Outings
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="mb-4 text-gray-600">
                   Fun, safe activities designed to immerse patients in community
                   settings, teaching socially acceptable behaviors and
                   encouraging healthy, sober community engagement.
@@ -705,11 +691,11 @@ export default function Programs() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="p-6 bg-gray-50 rounded-xl">
+                <h4 className="mb-4 text-xl font-semibold text-gray-900">
                   AA/Gamblers A/NA/ALANON
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="mb-4 text-gray-600">
                   Encouraging participation in community support programs to
                   gain different insights on coping, failure, and success from
                   others on similar journeys.
@@ -722,11 +708,11 @@ export default function Programs() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="p-6 bg-gray-50 rounded-xl">
+                <h4 className="mb-4 text-xl font-semibold text-gray-900">
                   Open Sharing/Talking Circle
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="mb-4 text-gray-600">
                   Open sessions for patients to share their journeys, discuss
                   what works and what doesn't, and bond with others while
                   providing mutual support and encouragement.
@@ -739,11 +725,11 @@ export default function Programs() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="p-6 bg-gray-50 rounded-xl">
+                <h4 className="mb-4 text-xl font-semibold text-gray-900">
                   Wellness Team
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="mb-4 text-gray-600">
                   Our comprehensive team includes licensed behavioral/mental
                   health professionals, medical professionals, counselors,
                   community health workers, peer support specialists, and case
@@ -763,16 +749,16 @@ export default function Programs() {
 
       {/* Programs Grid */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {programs.map((program, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-200 overflow-hidden"
+                className="overflow-hidden bg-white rounded-xl border border-gray-200 shadow-lg transition-shadow duration-200 hover:shadow-xl"
               >
                 <div className="p-8">
-                  <div className="flex items-start justify-between mb-4 gap-3">
-                    <h3 className="text-2xl font-bold text-gray-900 flex-1 min-w-0">
+                  <div className="flex gap-3 justify-between items-start mb-4">
+                    <h3 className="flex-1 min-w-0 text-2xl font-bold text-gray-900">
                       {program.title}
                     </h3>
                     <span
@@ -784,9 +770,9 @@ export default function Programs() {
                     </span>
                   </div>
 
-                  <p className="text-gray-600 mb-6">{program.description}</p>
+                  <p className="mb-6 text-gray-600">{program.description}</p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-2">
                     <div className="flex items-center space-x-2">
                       <Clock
                         className="text-gray-400"
@@ -808,7 +794,7 @@ export default function Programs() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">
+                    <h4 className="mb-3 font-semibold text-gray-900">
                       Program Features:
                     </h4>
                     <ul className="space-y-2">
@@ -818,7 +804,7 @@ export default function Programs() {
                           className="flex items-start space-x-2"
                         >
                           <CheckCircle
-                            className="text-green-500 mt-1"
+                            className="mt-1 text-green-500"
                             size={16}
                           />
                           <span className="text-sm text-gray-600">
@@ -831,7 +817,7 @@ export default function Programs() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-brand-blue/10 text-brand-blue border-brand-blue/20 border-2 px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition-opacity duration-200 flex items-center justify-center"
+                    className="flex justify-center items-center px-6 py-3 w-full font-semibold rounded-lg border-2 transition-opacity duration-200 bg-brand-blue/10 text-brand-blue border-brand-blue/20 hover:opacity-80"
                   >
                     Learn More
                     <ArrowRight
@@ -848,64 +834,64 @@ export default function Programs() {
 
       {/* Program Selection Guide */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               How to Choose the Right Program
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Our team will work with you to determine the most appropriate
               program based on your individual needs, circumstances, and
               recovery goals.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-blue/10">
                 <Users
                   className="text-brand-blue"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+              <h3 className="mb-4 text-xl font-semibold text-center text-gray-900">
                 Assessment
               </h3>
-              <p className="text-gray-600 text-center">
-                We conduct a comprehensive evaluation to understand your
+              <p className="text-center text-gray-600">
+                We conduct a comprehensive evaluation utilizing ASAM criteria to better understand your
                 specific needs, challenges, and goals before recommending a
                 program.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-gold/10">
                 <CheckCircle
                   className="text-brand-gold"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+              <h3 className="mb-4 text-xl font-semibold text-center text-gray-900">
                 Recommendation
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-center text-gray-600">
                 Based on your assessment, we'll recommend the program that best
                 fits your needs and provide detailed information about what to
                 expect.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-gold/10">
                 <ArrowRight
                   className="text-brand-gold"
                   size={32}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+              <h3 className="mb-4 text-xl font-semibold text-center text-gray-900">
                 Get Started
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-center text-gray-600">
                 Once you're ready, we'll help you enroll in your chosen program
                 and begin your journey to recovery.
               </p>
@@ -916,16 +902,16 @@ export default function Programs() {
 
       {/* Program Benefits */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
                 Why Our Programs Work
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={24}
                   />
                   <div>
@@ -941,7 +927,7 @@ export default function Programs() {
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={24}
                   />
                   <div>
@@ -957,7 +943,7 @@ export default function Programs() {
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={24}
                   />
                   <div>
@@ -973,7 +959,7 @@ export default function Programs() {
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle
-                    className="text-green-500 mt-1"
+                    className="mt-1 text-green-500"
                     size={24}
                   />
                   <div>
@@ -989,26 +975,26 @@ export default function Programs() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="p-8 bg-gray-50 rounded-2xl">
+              <h3 className="mb-6 text-2xl font-bold text-gray-900">
                 Ready to Start Your Recovery Journey?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="mb-6 text-gray-600">
                 Contact us today to learn more about our programs and find the
                 right fit for your recovery needs.
               </p>
               <div className="space-y-4">
                 <Link
                   href="/contact"
-                  className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200 block text-center"
+                  className="block px-6 py-3 w-full font-semibold text-center text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   Schedule a Consultation
                 </Link>
                 <div className="text-center">
-                  <p className="text-gray-600 mb-2">Or call us directly:</p>
+                  <p className="mb-2 text-gray-600">Or call us directly:</p>
                   <a
                     href="tel:5551234567"
-                    className="text-brand-blue font-semibold text-lg hover:underline"
+                    className="text-lg font-semibold text-brand-blue hover:underline"
                   >
                     (555) 123-4567
                   </a>
@@ -1021,23 +1007,23 @@ export default function Programs() {
 
       {/* Crisis Support */}
       <section className="py-20 bg-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
+        <div className="px-4 mx-auto max-w-7xl text-center sm:px-6 lg:px-8">
+          <div className="p-8 mx-auto max-w-4xl bg-white rounded-2xl shadow-xl">
+            <div className="flex justify-center items-center mb-6">
               <Phone
-                className="text-red-600 mr-3"
+                className="mr-3 text-red-600"
                 size={32}
               />
               <h2 className="text-3xl font-bold text-gray-900">
                 Need Immediate Help?
               </h2>
             </div>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="mb-8 text-lg text-gray-600">
               If you or someone you know is experiencing a crisis and needs
               immediate support, we're here to help 24/7.
             </p>
-            <div className="bg-red-100 border border-red-200 rounded-lg p-6 mb-8">
-              <div className="text-2xl font-bold text-red-700 mb-2">
+            <div className="p-6 mb-8 bg-red-100 rounded-lg border border-red-200">
+              <div className="text-2xl font-bold text-red-700">
                 24/7 Crisis Hotline
               </div>
               <a
@@ -1046,11 +1032,27 @@ export default function Programs() {
               >
                 (555) 123-4567
               </a>
+              <div className="mt-4 text-2xl font-bold text-red-700">
+                Emergency Services
+              </div>
+              <a
+                href="tel:911"
+                className="text-3xl font-bold text-red-600 hover:underline"
+              >
+                911
+              </a>
+              <div className="mt-4 text-2xl font-bold text-red-700">
+                Suicide Prevention Lifeline
+              </div>
+              <a
+                href="tel:988"
+                className="text-3xl font-bold text-red-600 hover:underline"
+              >
+                988
+              </a>
             </div>
-            <p className="text-sm text-gray-600">
-              For life-threatening emergencies, please call 911 or go to your
-              nearest emergency room.
-            </p>
+            
+            
           </div>
         </div>
       </section>
