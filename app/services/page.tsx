@@ -344,25 +344,25 @@ export default function Services() {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
+      <section className="py-20 bg-gradient-to-b from-brand-gold/20 to-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-8 bg-white rounded-xl shadow-lg transition-shadow duration-200 hover:shadow-xl"
+                className="p-8 bg-white rounded-2xl shadow-lg transition-all duration-300 transform hover:shadow-2xl hover:scale-102"
               >
                 <div
                   className={`w-16 h-16 ${getColorClasses(
                     service.color
-                  )} rounded-full flex items-center justify-center mb-6`}
+                  )} rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md`}
                 >
-                  <service.icon size={32} />
+                  <service.icon size={32} className="text-white" />
                 </div>
-                <h3 className="mb-4 text-xl font-semibold text-gray-900">
+                <h3 className="mb-4 text-2xl font-bold text-gray-900">
                   {service.title}
                 </h3>
-                <p className="mb-6 text-gray-600">{service.description}</p>
+                <p className="mb-6 text-gray-700">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li
