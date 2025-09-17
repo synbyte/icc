@@ -270,7 +270,7 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden">
+      <section className="flex overflow-hidden relative items-center minn-h-screen">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
@@ -288,42 +288,42 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+        <div className="absolute left-10 top-20 w-32 h-32 rounded-full blur-xl animate-pulse bg-white/10"></div>
+        <div className="absolute right-10 bottom-20 w-48 h-48 rounded-full blur-2xl delay-1000 animate-pulse bg-brand-gold/20"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full blur-lg delay-500 animate-pulse bg-white/5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative px-4 mx-auto w-full max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 Our{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-500 from-brand-gold">
                   Services
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed duration-1000 md:text-2xl text-white/90 animate-in fade-in slide-in-from-bottom">
                 We provide comprehensive, evidence-based treatment services
                 designed to address substance abuse and mental health challenges
                 with{" "}
-                <span className="text-brand-gold font-semibold">
+                <span className="font-semibold text-brand-gold">
                   compassion, expertise, and personalized care.
                 </span>
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
               <Link
                 href="/contact"
-                className="group bg-brand-gold text-brand-blue px-8 py-4 rounded-2xl text-lg font-bold hover:bg-brand-gold-light transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl"
+                className="flex justify-center items-center px-8 py-4 text-lg font-bold rounded-2xl transition-all duration-300 transform group bg-brand-gold text-brand-blue hover:bg-brand-gold-light hover:scale-105 hover:shadow-2xl"
               >
                 Schedule a Consultation
               </Link>
               <a
                 href="tel:5551234567"
-                className="group border-2 border-white/30 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+                className="flex justify-center items-center px-8 py-4 text-lg font-semibold text-white rounded-2xl border-2 backdrop-blur-sm transition-all duration-300 group border-white/30 hover:bg-white/10 hover:border-white/50"
               >
                 Call (555) 123-4567
               </a>
@@ -333,23 +333,23 @@ export default function Services() {
       </section>
  {/*Quote */}
  <section className="py-20 bg-brand-gold">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+        <div className="px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+          <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
           “Don’t judge each day by the harvest you reap but by the seeds that you plant.”
           </blockquote>
-          <cite className="text-xl text-white font-semibold">
+          <cite className="text-xl font-semibold text-white">
             — Robert Louis Stevenson
           </cite>
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 p-8"
+                className="p-8 bg-white rounded-xl shadow-lg transition-shadow duration-200 hover:shadow-xl"
               >
                 <div
                   className={`w-16 h-16 ${getColorClasses(
@@ -358,10 +358,10 @@ export default function Services() {
                 >
                   <service.icon size={32} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <p className="mb-6 text-gray-600">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li
@@ -369,7 +369,7 @@ export default function Services() {
                       className="flex items-start space-x-2"
                     >
                       <CheckCircle
-                        className="text-green-500 mt-1"
+                        className="mt-1 text-green-500"
                         size={16}
                       />
                       <span className="text-sm text-gray-600">{feature}</span>
@@ -383,66 +383,66 @@ export default function Services() {
       </section>
 
       {/* Treatment Approach */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20 bg-brand-blue/10">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Our Treatment Approach
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               We believe in a holistic, person-centered approach to treatment
               that addresses the whole person, not just their symptoms.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
-              <div className="w-20 h-20 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="flex justify-center items-center mx-auto mb-6 w-20 h-20 rounded-full border border-brand-blue bg-brand-blue/10">
                 <span className="text-2xl font-bold text-brand-blue">1</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-lg font-semibold text-gray-900">
                 Assessment
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 Comprehensive evaluation to understand your unique needs,
                 challenges, and goals.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="flex justify-center items-center mx-auto mb-6 w-20 h-20 rounded-full border border-brand-gold bg-brand-gold/10">
                 <span className="text-2xl font-bold text-brand-gold">2</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-lg font-semibold text-gray-900">
                 Planning
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 Development of a personalized treatment plan tailored to your
                 specific situation.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="flex justify-center items-center mx-auto mb-6 w-20 h-20 rounded-full border border-brand-blue bg-brand-blue/10">
                 <span className="text-2xl font-bold text-brand-blue">3</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-lg font-semibold text-gray-900">
                 Treatment
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 Implementation of evidence-based therapies and interventions in
                 a supportive environment.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="flex justify-center items-center mx-auto mb-6 w-20 h-20 rounded-full border border-brand-gold bg-brand-gold/10">
                 <span className="text-2xl font-bold text-brand-gold">4</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <h3 className="mb-3 text-lg font-semibold text-gray-900">
                 Recovery
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 Ongoing support and aftercare to help you maintain your progress
                 and prevent relapse.
               </p>
@@ -452,14 +452,14 @@ export default function Services() {
       </section>
 
       {/* Insurance and Payment */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-20 bg-brand-blue">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
                 Insurance & Payment Options
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="mb-8 text-lg text-gray-200">
                 We work with most major insurance providers and offer flexible
                 payment options to ensure treatment is accessible to everyone
                 who needs it.
@@ -470,7 +470,7 @@ export default function Services() {
                     className="text-green-500"
                     size={20}
                   />
-                  <span className="text-gray-700">
+                  <span className="text-gray-200">
                     Most major insurance plans accepted
                   </span>
                 </div>
@@ -479,7 +479,7 @@ export default function Services() {
                     className="text-green-500"
                     size={20}
                   />
-                  <span className="text-gray-700">
+                  <span className="text-gray-200">
                     Sliding scale fees available
                   </span>
                 </div>
@@ -488,7 +488,7 @@ export default function Services() {
                     className="text-green-500"
                     size={20}
                   />
-                  <span className="text-gray-700">
+                  <span className="text-gray-200">
                     Payment plans and financing options
                   </span>
                 </div>
@@ -497,32 +497,32 @@ export default function Services() {
                     className="text-green-500"
                     size={20}
                   />
-                  <span className="text-gray-700">
+                  <span className="text-gray-200">
                     Free initial consultation
                   </span>
                 </div>
               </div>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="p-8 rounded-2xl bg-brand-blue-dark">
+              <h3 className="mb-6 text-2xl font-bold text-white">
                 Ready to Get Started?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="mb-6 text-gray-200">
                 Contact us today to learn more about our services and how we can
                 help you or your loved one.
               </p>
               <div className="space-y-4">
                 <Link
                   href="/contact"
-                  className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200 block text-center"
+                  className="block px-6 py-3 w-full font-semibold text-center text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   Schedule a Consultation
                 </Link>
                 <div className="text-center">
-                  <p className="text-gray-600 mb-2">Or call us directly:</p>
+                  <p className="mb-2 text-gray-200">Or call us directly:</p>
                   <a
                     href="tel:5551234567"
-                    className="text-brand-blue font-semibold text-lg hover:underline"
+                    className="text-lg font-semibold text-white hover:underline"
                   >
                     (555) 123-4567
                   </a>
@@ -535,23 +535,23 @@ export default function Services() {
 
       {/* Crisis Support */}
       <section className="py-20 bg-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
+        <div className="px-4 mx-auto max-w-7xl text-center sm:px-6 lg:px-8">
+          <div className="p-8 mx-auto max-w-4xl bg-white rounded-2xl shadow-xl">
+            <div className="flex justify-center items-center mb-6">
               <Phone
-                className="text-red-600 mr-3"
+                className="mr-3 text-red-600"
                 size={32}
               />
               <h2 className="text-3xl font-bold text-gray-900">
                 24/7 Crisis Support
               </h2>
             </div>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="mb-8 text-lg text-gray-600">
               If you or someone you know is experiencing a mental health crisis
               or needs immediate support, we're here to help around the clock.
             </p>
-            <div className="bg-red-100 border border-red-200 rounded-lg p-6 mb-8">
-              <div className="text-2xl font-bold text-red-700 mb-2">
+            <div className="p-6 mb-8 bg-red-100 rounded-lg border border-red-200">
+              <div className="mb-2 text-2xl font-bold text-red-700">
                 Emergency Hotline
               </div>
               <a

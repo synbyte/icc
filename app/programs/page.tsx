@@ -25,7 +25,7 @@ import Image from "next/image";
 export default function Programs() {
   const programs = [
     {
-      title: "Comprehensive Outpatient Treatment",
+      title: "Intensive Outpatient Treatment",
       duration: "12-24 weeks",
       schedule: "3-5 sessions per week",
       description:
@@ -224,7 +224,7 @@ export default function Programs() {
       </section>
 
       {/* Program Description */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -304,7 +304,7 @@ export default function Programs() {
       </section>
 
       {/* Care Coordination */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -438,7 +438,7 @@ export default function Programs() {
       </section>
 
       {/* Program Services */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -747,8 +747,20 @@ export default function Programs() {
         </div>
       </section>
 
+      {/*Quote */}
+      <section className="py-20 bg-brand-gold">
+        <div className="px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+          <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
+          “It does not matter how slowly you go as long as you do not stop.”
+          </blockquote>
+          <cite className="text-xl font-semibold text-white">
+            — Confucius
+          </cite>
+        </div>
+      </section>
+      
       {/* Programs Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {programs.map((program, index) => (
@@ -833,7 +845,7 @@ export default function Programs() {
       </section>
 
       {/* Program Selection Guide */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -901,11 +913,11 @@ export default function Programs() {
       </section>
 
       {/* Program Benefits */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-blue">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
+              <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
                 Why Our Programs Work
               </h2>
               <div className="space-y-6">
@@ -915,10 +927,10 @@ export default function Programs() {
                     size={24}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-white">
                       Evidence-Based Approaches
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       All our programs are grounded in proven therapeutic
                       methods and the latest research in addiction and mental
                       health treatment.
@@ -931,10 +943,10 @@ export default function Programs() {
                     size={24}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-white">
                       Personalized Treatment
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       Each program is tailored to your unique needs,
                       circumstances, and recovery goals with regular adjustments
                       as you progress.
@@ -947,10 +959,10 @@ export default function Programs() {
                     size={24}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-white">
                       Experienced Professionals
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       Our team includes therapists, certified counselors, and
                       medical professionals with years of lived experience and specialized training in
                       addiction and mental health.
@@ -963,10 +975,10 @@ export default function Programs() {
                     size={24}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-white">
                       Ongoing Support
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       Recovery is a lifelong journey. We provide continued
                       support and resources to help you maintain your progress
                       long after program completion.
@@ -975,11 +987,11 @@ export default function Programs() {
                 </div>
               </div>
             </div>
-            <div className="p-8 bg-gray-50 rounded-2xl">
-              <h3 className="mb-6 text-2xl font-bold text-gray-900">
+            <div className="p-8 rounded-2xl bg-brand-blue-dark">
+              <h3 className="mb-6 text-2xl font-bold text-white">
                 Ready to Start Your Recovery Journey?
               </h3>
-              <p className="mb-6 text-gray-600">
+              <p className="mb-6 text-white">
                 Contact us today to learn more about our programs and find the
                 right fit for your recovery needs.
               </p>
@@ -991,10 +1003,10 @@ export default function Programs() {
                   Schedule a Consultation
                 </Link>
                 <div className="text-center">
-                  <p className="mb-2 text-gray-600">Or call us directly:</p>
+                  <p className="mb-2 text-gray-200">Or call us directly:</p>
                   <a
                     href="tel:5551234567"
-                    className="text-lg font-semibold text-brand-blue hover:underline"
+                    className="text-lg font-semibold text-white hover:underline"
                   >
                     (555) 123-4567
                   </a>
