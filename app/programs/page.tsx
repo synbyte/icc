@@ -426,8 +426,11 @@ export default function Programs() {
       </section>
 
        {/*Quote */}
-       <section className="py-20 bg-brand-blue">
-        <div className="px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+       <section className="relative py-20 bg-brand-blue">
+        <div className="absolute inset-0 opacity-10">
+          <Image src="/logo_notext.png" alt="Logo" layout="fill" objectFit="cover" />
+        </div>
+        <div className="relative z-10 px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
           <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
           “Sometimes the smallest step in the right direction ends of being the biggest step of your life. Tiptoe if you must, but take the step.”
           </blockquote>
@@ -748,8 +751,11 @@ export default function Programs() {
       </section>
 
       {/*Quote */}
-      <section className="py-20 bg-brand-gold">
-        <div className="px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-brand-blue">
+        <div className="absolute inset-0 opacity-10">
+          <Image src="/logo_notext.png" alt="Logo" layout="fill" objectFit="cover" />
+        </div>
+        <div className="relative z-10 px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
           <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
           “It does not matter how slowly you go as long as you do not stop.”
           </blockquote>

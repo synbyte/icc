@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import logo from "@/public/logo_notext.png";
 
 export default function Services() {
   const services = [

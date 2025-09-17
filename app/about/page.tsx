@@ -95,7 +95,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden py-10 lg:py-0">
+      <section className="flex overflow-hidden relative items-center py-10 minn-h-screen lg:py-0">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
@@ -113,39 +113,39 @@ export default function About() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+        <div className="absolute left-10 top-20 w-32 h-32 rounded-full blur-xl animate-pulse bg-white/10"></div>
+        <div className="absolute right-10 bottom-20 w-48 h-48 rounded-full blur-2xl delay-1000 animate-pulse bg-brand-gold/20"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full blur-lg delay-500 animate-pulse bg-white/5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative px-4 mx-auto w-full max-w-7xl sm:px-6 lg:px-8">
        
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 About{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-500 from-brand-gold">
                   Integrity Care
                 </span>
-                <span className="block text-4xl md:text-5xl font-light">
+                <span className="block text-4xl font-light md:text-5xl">
                   Connection
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed duration-1000 md:text-2xl text-white/90 animate-in fade-in slide-in-from-bottom">
                 We are a dedicated team of mental health and addiction treatment
                 professionals committed to providing compassionate,
                 evidence-based care that{" "}
-                <span className="text-brand-gold font-semibold">
+                <span className="font-semibold text-brand-gold">
                   transforms lives and strengthens communities.
                 </span>
               </p>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+            <div className="grid grid-cols-1 gap-6 mx-auto max-w-4xl sm:grid-cols-3">
+              <div className="flex justify-center items-center p-4 space-x-3 rounded-2xl border backdrop-blur-sm bg-white/10 border-white/20">
+                <div className="flex justify-center items-center w-10 h-10 rounded-full bg-brand-gold/20">
                   <Award
                     className="text-brand-gold"
                     size={20}
@@ -155,13 +155,13 @@ export default function About() {
                   <div className="font-semibold text-white">
                     Dedicated Professionals
                   </div>
-                  <div className="text-white/70 text-sm">
+                  <div className="text-sm text-white/70">
                     Experienced & Trained
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+              <div className="flex justify-center items-center p-4 space-x-3 rounded-2xl border backdrop-blur-sm bg-white/10 border-white/20">
+                <div className="flex justify-center items-center w-10 h-10 rounded-full bg-brand-gold/20">
                   <Heart
                     className="text-brand-gold"
                     size={20}
@@ -171,13 +171,13 @@ export default function About() {
                   <div className="font-semibold text-white">
                     Evidence-Based Care
                   </div>
-                  <div className="text-white/70 text-sm">
+                  <div className="text-sm text-white/70">
                     Proven treatment methods
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                <div className="w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+              <div className="flex justify-center items-center p-4 space-x-3 rounded-2xl border backdrop-blur-sm bg-white/10 border-white/20">
+                <div className="flex justify-center items-center w-10 h-10 rounded-full bg-brand-gold/20">
                   <Users
                     className="text-brand-gold"
                     size={20}
@@ -187,7 +187,7 @@ export default function About() {
                   <div className="font-semibold text-white">
                     Community Focused
                   </div>
-                  <div className="text-white/70 text-sm">
+                  <div className="text-sm text-white/70">
                     Strengthening communities
                   </div>
                 </div>
@@ -200,50 +200,50 @@ export default function About() {
 
       {/* Our Team */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Our experienced team of licensed professionals is dedicated to
               providing the highest quality care with compassion and expertise.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className="overflow-hidden bg-white rounded-xl shadow-lg"
               >
-                <div className="h-64 bg-gray-200 flex items-center justify-center">
+                <div className="flex justify-center items-center h-64 bg-gray-200">
                   <Image
                     src={member.image}
                     alt={member.name}
                     width={300}
                     height={300}
-                    className="w-full h-full object-cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                  <h3 className="mb-1 text-xl font-semibold text-gray-900">
                     {member.name}
                   </h3>
-                  <p className="text-brand-blue font-medium mb-2">
+                  <p className="mb-2 font-medium text-brand-blue">
                     {member.title}
                   </p>
                   {member.credentials && (
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="mb-2 text-sm text-gray-600">
                       {member.credentials}
                     </p>
                   )}
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="mb-4 text-sm text-gray-500">
                     {member.specialty}
                   </p>
                   <button
                     onClick={() => setSelectedMember(member)}
-                    className="w-full bg-brand-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-blue/90 transition-colors duration-200"
+                    className="px-4 py-2 w-full text-sm font-medium text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue/90"
                   >
                     Read Bio
                   </button>
@@ -256,16 +256,16 @@ export default function About() {
 
       {/* Mission */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center p-8 rounded-xl bg-brand-blue/5">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="p-8 text-center rounded-xl bg-brand-blue/5">
             <Heart
-              className="text-brand-blue mx-auto mb-6"
+              className="mx-auto mb-6 text-brand-blue"
               size={48}
             />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               Our Mission
             </h3>
-            <p className="text-gray-600 max-w-4xl mx-auto">
+            <p className="mx-auto max-w-4xl text-gray-600">
               Here at ICC, our mission is to provide compassionate, holistic,
               individual-centered and direct treatment and approach for
               individuals facing gambling, substance abuse and mental health
@@ -290,16 +290,16 @@ export default function About() {
 
       {/* Vision */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center p-8 rounded-xl bg-brand-gold/5">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="p-8 text-center rounded-xl bg-brand-gold/5">
             <Shield
-              className="text-brand-gold mx-auto mb-6"
+              className="mx-auto mb-6 text-brand-gold"
               size={48}
             />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               Our Vision
             </h3>
-            <p className="text-gray-600 max-w-4xl mx-auto">
+            <p className="mx-auto max-w-4xl text-gray-600">
               Our vision is to improve the lives of those living with
               behavioral/mental issues and provide emotional wellness for
               individuals and families as we strive to deliver services and
@@ -316,30 +316,30 @@ export default function About() {
 
       {/* Core Values */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Our Core Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               These fundamental principles guide our work and shape the culture
               of care we provide to every individual and family we serve.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-xl hover:shadow-lg transition-shadow duration-200"
+                className="p-6 text-center rounded-xl transition-shadow duration-200 hover:shadow-lg"
               >
-                <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-blue/10">
                   <value.icon
                     className="text-brand-blue"
                     size={32}
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   {value.title}
                 </h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -350,14 +350,17 @@ export default function About() {
       </section>
 
       {/* Founder's Quote */}
-      <section className="py-20 bg-brand-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+      <section className="relative py-20 bg-brand-blue">
+        <div className="absolute inset-0 opacity-10">
+          <Image src="/logo_notext.png" alt="Logo" layout="fill" objectFit="cover" />
+        </div>
+        <div className="relative z-10 px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+          <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-white md:text-3xl">
             "Our goal is to be a leader in improving the health and wellness of
             our community by providing inspired treatments, teaching our clients
             healthy practices, and promoting wellness education."
           </blockquote>
-          <cite className="text-xl text-white font-semibold">
+          <cite className="text-xl font-semibold text-white">
             — Fatthi Sadeddin, Founder
           </cite>
         </div>
@@ -365,24 +368,24 @@ export default function About() {
 
       {/* Accreditation & Licenses */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Accreditation & Licenses
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               We maintain the highest standards of care through rigorous
               accreditation and licensing requirements.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl bg-brand-blue/5">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="p-8 text-center rounded-xl bg-brand-blue/5">
               <Award
-                className="text-brand-blue mx-auto mb-4"
+                className="mx-auto mb-4 text-brand-blue"
                 size={48}
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 State Licensed
               </h3>
               <p className="text-gray-600">
@@ -391,12 +394,12 @@ export default function About() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl bg-brand-gold/5">
+            <div className="p-8 text-center rounded-xl bg-brand-gold/5">
               <CheckCircle
-                className="text-brand-gold mx-auto mb-4"
+                className="mx-auto mb-4 text-brand-gold"
                 size={48}
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 CARF Accredited
               </h3>
               <p className="text-gray-600">
@@ -405,12 +408,12 @@ export default function About() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl bg-brand-gold/5">
+            <div className="p-8 text-center rounded-xl bg-brand-gold/5">
               <Shield
-                className="text-brand-gold mx-auto mb-4"
+                className="mx-auto mb-4 text-brand-gold"
                 size={48}
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">
                 HIPAA Compliant
               </h3>
               <p className="text-gray-600">
@@ -424,25 +427,25 @@ export default function About() {
 
       {/* Contact CTA */}
       <section className="py-20 bg-brand-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="px-4 mx-auto max-w-7xl text-center sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             Ready to Start Your Recovery Journey?
           </h2>
-          <p className="text-xl text-brand-blue/80 mb-8 max-w-3xl mx-auto">
+          <p className="mx-auto mb-8 max-w-3xl text-xl text-brand-blue/80">
             Our compassionate team is here to support you every step of the way.
             Contact us today to learn more about our services and how we can
             help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center sm:flex-row">
             <Link
               href="/contact"
-              className="bg-white text-brand-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold bg-white rounded-lg transition-colors duration-200 text-brand-blue hover:bg-gray-100"
             >
               Contact Us Today
             </Link>
             <a
               href="tel:5551234567"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-brand-blue transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold text-white rounded-lg border-2 border-white transition-colors duration-200 hover:bg-white hover:text-brand-blue"
             >
               Call (555) 123-4567
             </a>
@@ -452,15 +455,15 @@ export default function About() {
 
       {/* Bio Modal */}
       {selectedMember && (
-        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div className="flex fixed inset-0 z-50 justify-center items-center p-4 backdrop-blur-sm bg-black/30">
           <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl">
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                  <h3 className="mb-1 text-2xl font-bold text-gray-900">
                     {selectedMember.name}
                   </h3>
-                  <p className="text-brand-blue font-medium text-lg">
+                  <p className="text-lg font-medium text-brand-blue">
                     {selectedMember.title}
                   </p>
                   {selectedMember.credentials && (
@@ -471,13 +474,13 @@ export default function About() {
                 </div>
                 <button
                   onClick={() => setSelectedMember(null)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                  className="text-gray-400 transition-colors duration-200 hover:text-gray-600"
                 >
                   <X size={24} />
                 </button>
               </div>
-              <div className="prose prose-gray max-w-none">
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+              <div className="max-w-none prose prose-gray">
+                <p className="leading-relaxed text-gray-700 whitespace-pre-line">
                   {selectedMember.bio}
                 </p>
               </div>
