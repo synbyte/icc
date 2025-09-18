@@ -937,7 +937,7 @@ export default function Programs() {
                     <h3 className="text-lg font-semibold text-white">
                       Evidence-Based Approaches
                     </h3>
-                    <p className="text-gray-200">
+                    <p className="max-w-xs text-gray-200 md:max-w-full">
                       All our programs are grounded in proven therapeutic
                       methods and the latest research in addiction and mental
                       health treatment.
@@ -953,7 +953,7 @@ export default function Programs() {
                     <h3 className="text-lg font-semibold text-white">
                       Personalized Treatment
                     </h3>
-                    <p className="text-gray-200">
+                    <p className="max-w-xs text-gray-200 md:max-w-full">
                       Each program is tailored to your unique needs,
                       circumstances, and recovery goals with regular adjustments
                       as you progress.
@@ -969,7 +969,7 @@ export default function Programs() {
                     <h3 className="text-lg font-semibold text-white">
                       Experienced Professionals
                     </h3>
-                    <p className="text-gray-200">
+                    <p className="max-w-xs text-gray-200 md:max-w-full">
                       Our team includes therapists, certified counselors, and
                       medical professionals with years of lived experience and specialized training in
                       addiction and mental health.
@@ -985,7 +985,7 @@ export default function Programs() {
                     <h3 className="text-lg font-semibold text-white">
                       Ongoing Support
                     </h3>
-                    <p className="text-gray-200">
+                    <p className="max-w-xs text-gray-200 md:max-w-full">
                       Recovery is a lifelong journey. We provide continued
                       support and resources to help you maintain your progress
                       long after program completion.

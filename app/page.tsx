@@ -133,8 +133,9 @@ export default function Home() {
                     <div className="font-semibold text-white">
                       Insurance Accepted
                     </div>
-                    <div className="text-sm text-white/70">
-                      Oregon Medicaid, Blue Cross Blue Shield, Kaiser Permanente, Moda, Humana, and more
+                    <div className="text-sm max-w-[250px] text-white/70">
+                      Oregon Medicaid, Blue Cross Blue Shield, Kaiser
+                      Permanente, Moda, Humana, and more
                     </div>
                   </div>
                 </div>
@@ -188,7 +189,10 @@ export default function Home() {
                 Behavior/Mental Wellness Services
               </h3>
               <p className="text-gray-600">
-                Professional counseling and therapy services for social anxiety issues, dissociative disorders, disruptive disorders, depression, anxiety, PTSD/TIC, bipolar disorder and other behavioral/mental wellness conditions
+                Professional counseling and therapy services for social anxiety
+                issues, dissociative disorders, disruptive disorders,
+                depression, anxiety, PTSD/TIC, bipolar disorder and other
+                behavioral/mental wellness conditions
               </p>
             </div>
 
@@ -203,8 +207,10 @@ export default function Home() {
                 Family Support
               </h3>
               <p className="text-gray-600">
-                Comprehensive family therapy, generational re-mapping
-and support programs to help aid in loved ones understand and support the recovery process and rebuilding relationship bonds with the recovering individual
+                Comprehensive family therapy, generational re-mapping and
+                support programs to help aid in loved ones understand and
+                support the recovery process and rebuilding relationship bonds
+                with the recovering individual
               </p>
             </div>
           </div>
