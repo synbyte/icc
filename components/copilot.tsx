@@ -1,5 +1,5 @@
 "use client"
-import { CopilotPopup } from "@copilotkit/react-ui";
+import { CopilotPopup, ButtonProps, useChatContext } from "@copilotkit/react-ui";
 import { useCopilotReadable } from "@copilotkit/react-core";
 import { useState } from "react";
 
@@ -118,7 +118,8 @@ const CopilotWrapper = ({ children }) => {
   return (
     <div className="relative">
       {children}
-      <CopilotPopup
+          <CopilotPopup
+              Button={Button}
         className="z-50"
         instructions={"You are an assistant working for a treatment center called Integrity Care Connection. Your job is to provide information about services and programs and to answer any questions related to the center and its services."}
         labels={{
@@ -129,5 +130,20 @@ const CopilotWrapper = ({ children }) => {
     </div>
   );
 };
+
+function Button({}: ButtonProps) {
+    const { open, setOpen } = useChatContext();
+    const wrapperStyles = "w-24 bg-brand-blue text-white p-4 rounded-full text-center cursor-pointer";
+    return (
+      <div onClick={() => setOpen(!open)} className={wrapperStyles}>
+        <button
+          className={`${open ? "open" : ""}`}
+          aria-label={open ? "Close Chat" : "Open Chat"}
+        >
+          Ask AI
+        </button>
+      </div>
+    );
+  };
 
 export default CopilotWrapper
