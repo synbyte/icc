@@ -25,28 +25,11 @@ import Image from "next/image";
 export default function Programs() {
   const programs = [
     {
-      title: "Intensive Outpatient Treatment",
-      duration: "12-24 weeks",
-      schedule: "3-5 sessions per week",
-      description:
-        "Our primary treatment program combining individual therapy, group sessions, and comprehensive support services for substance use and behavioral health disorders.",
-      features: [
-        "Weekly individual therapy sessions",
-        "Daily group therapy and support groups",
-        "Family therapy and reconnection support",
-        "Life skills mentoring and training",
-        "PsychoSocial/Educational counseling",
-        "Health, nutrition, and fitness support",
-      ],
-      intensity: "High",
-      color: "blue",
-    },
-    {
-      title: "Dual Diagnosis & Co-Occurring Disorders",
+      title: "Partial Hospitalization Program Services",
       duration: "16-24 weeks",
       schedule: "4-6 sessions per week",
       description:
-        "Specialized program for individuals with co-occurring substance use and mental health disorders, providing integrated treatment approaches.",
+        "Partial Hospitalization Programming (PHP) is a type of counseling services that is performed in four (4) hour blocks of time that combines individual, group, peer services and other sessions, Monday - Friday.  PHP services offer a more structured, intense therapy utilizing a wide range of techniques that include CBT, DBT, TF-CBT, MI and Contingency Management.  Individuals whose intake confirms they meet the ASAM criteria for this program go home each day",
       features: [
         "Integrated treatment approach",
         "Medical evaluation and blood workup",
@@ -59,9 +42,27 @@ export default function Programs() {
       color: "purple",
     },
     {
+      title: "Intensive Outpatient Treatment",
+      duration: "12-24 weeks",
+      schedule: "3-5 sessions per week",
+      description:
+        "Another intensive treatment program, combining individual, group and other sessions in a three (3) hour block of time Monday - Friday.  IOP programming utilizes many of the same techniques mentioned above under PHP services and is similar in that its sessions are more intense but offer the same comprehensive support services",
+      features: [
+        "Weekly individual therapy sessions",
+        "Daily group therapy and support groups",
+        "Family therapy and reconnection support",
+        "Life skills mentoring and training",
+        "PsychoSocial/Educational counseling",
+        "Health, nutrition, and fitness support",
+      ],
+      intensity: "High",
+      color: "blue",
+    },
+
+    {
       title: "Gambling Addiction Recovery",
       duration: "12-20 weeks",
-      schedule: "3-4 sessions per week",
+      schedule: "3-4 sessions per week suggested, but numbers can vary",
       description:
         "Specialized program for gambling addiction disorders, addressing the unique challenges and providing targeted support for recovery.",
       features: [
@@ -78,7 +79,7 @@ export default function Programs() {
     {
       title: "Family Recovery & Support",
       duration: "8-16 weeks",
-      schedule: "2-3 sessions per week",
+      schedule: "2-3 sessions per week suggested, but numbers can vary",
       description:
         "Comprehensive support program for families affected by addiction, focusing on healing relationships and building healthy communication.",
       features: [
@@ -95,7 +96,7 @@ export default function Programs() {
     {
       title: "Life Skills & Independence",
       duration: "8-12 weeks",
-      schedule: "2-3 sessions per week",
+      schedule: "2-3 sessions per week suggested, but numbers can vary",
       description:
         "Focused program on developing essential life skills, employment readiness, and independent living capabilities for sustained recovery.",
       features: [
@@ -452,7 +453,90 @@ export default function Programs() {
               behaviors from all perspectives
             </p>
           </div>
+      {/* Programs Grid */}
+      <section className="py-20">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="overflow-hidden bg-white rounded-xl border border-gray-200 shadow-lg transition-shadow duration-200 hover:shadow-xl"
+              >
+                <div className="p-8">
+                  <div className="flex gap-3 justify-between items-start mb-4">
+                    <h3 className="flex-1 min-w-0 text-2xl font-bold text-gray-900">
+                      {program.title}
+                    </h3>
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap flex-shrink-0 ${getIntensityColor(
+                        program.intensity
+                      )}`}
+                    >
+                      {program.intensity} Intensity
+                    </span>
+                  </div>
 
+                  <p className="mb-6 text-gray-600">{program.description}</p>
+
+                  <div className="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-2">
+                    <div className="flex items-center space-x-2">
+                      <Clock
+                        className="text-gray-400"
+                        size={16}
+                      />
+                      <span className="text-sm text-gray-600">
+                        <strong>Duration:</strong> {program.duration}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Calendar
+                        className="text-gray-400"
+                        size={16}
+                      />
+                      <span className="text-sm text-gray-600">
+                        <strong>Schedule:</strong> {program.schedule}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="mb-3 font-semibold text-gray-900">
+                      Program Features:
+                    </h4>
+                    <ul className="space-y-2">
+                      {program.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="flex items-start space-x-2"
+                        >
+                          <CheckCircle
+                            className="mt-1 text-green-500"
+                            size={16}
+                          />
+                          <span className="text-sm text-gray-600">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    href="/contact"
+                    className="flex justify-center items-center px-6 py-3 w-full font-semibold rounded-lg border-2 transition-opacity duration-200 bg-brand-blue/10 text-brand-blue border-brand-blue/20 hover:opacity-80"
+                  >
+                    Learn More
+                    <ArrowRight
+                      className="ml-2"
+                      size={16}
+                    />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Individual Therapy */}
             <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-lg">
@@ -765,90 +849,7 @@ export default function Programs() {
         </div>
       </section>
       
-      {/* Programs Grid */}
-      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {programs.map((program, index) => (
-              <div
-                key={index}
-                className="overflow-hidden bg-white rounded-xl border border-gray-200 shadow-lg transition-shadow duration-200 hover:shadow-xl"
-              >
-                <div className="p-8">
-                  <div className="flex gap-3 justify-between items-start mb-4">
-                    <h3 className="flex-1 min-w-0 text-2xl font-bold text-gray-900">
-                      {program.title}
-                    </h3>
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap flex-shrink-0 ${getIntensityColor(
-                        program.intensity
-                      )}`}
-                    >
-                      {program.intensity} Intensity
-                    </span>
-                  </div>
-
-                  <p className="mb-6 text-gray-600">{program.description}</p>
-
-                  <div className="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-2">
-                    <div className="flex items-center space-x-2">
-                      <Clock
-                        className="text-gray-400"
-                        size={16}
-                      />
-                      <span className="text-sm text-gray-600">
-                        <strong>Duration:</strong> {program.duration}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Calendar
-                        className="text-gray-400"
-                        size={16}
-                      />
-                      <span className="text-sm text-gray-600">
-                        <strong>Schedule:</strong> {program.schedule}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="mb-3 font-semibold text-gray-900">
-                      Program Features:
-                    </h4>
-                    <ul className="space-y-2">
-                      {program.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-start space-x-2"
-                        >
-                          <CheckCircle
-                            className="mt-1 text-green-500"
-                            size={16}
-                          />
-                          <span className="text-sm text-gray-600">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="flex justify-center items-center px-6 py-3 w-full font-semibold rounded-lg border-2 transition-opacity duration-200 bg-brand-blue/10 text-brand-blue border-brand-blue/20 hover:opacity-80"
-                  >
-                    Learn More
-                    <ArrowRight
-                      className="ml-2"
-                      size={16}
-                    />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ 
 
       {/* Program Selection Guide */}
       <section className="py-20 bg-brand-blue/10">
@@ -1041,7 +1042,7 @@ export default function Programs() {
               immediate support, we're here to help 24/7.
             </p>
             <div className="p-6 mb-8 bg-red-100 rounded-lg border border-red-200">
-              <div className="text-2xl font-bold text-red-700">
+              <div className="text-xl font-bold text-red-700">
                 24/7 Crisis Hotline
               </div>
               <a
@@ -1050,7 +1051,7 @@ export default function Programs() {
               >
                 (555) 123-4567
               </a>
-              <div className="mt-4 text-2xl font-bold text-red-700">
+              <div className="mt-4 text-xl font-bold text-red-700">
                 Emergency Services
               </div>
               <a
@@ -1059,7 +1060,7 @@ export default function Programs() {
               >
                 911
               </a>
-              <div className="mt-4 text-2xl font-bold text-red-700">
+              <div className="mt-4 text-xl font-bold text-red-700">
                 Suicide Prevention Lifeline
               </div>
               <a

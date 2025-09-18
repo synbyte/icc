@@ -49,28 +49,28 @@ export default function PatientPortal() {
       day: "Mondays",
       time: "6:00 PM - 7:30 PM",
       location: "Main Conference Room",
-      facilitator: "Sarah Johnson, LCSW",
+      facilitator: "George Hutchins",
     },
     {
       name: "Family Support Group",
       day: "Wednesdays",
       time: "7:00 PM - 8:30 PM",
       location: "Family Room",
-      facilitator: "Jennifer Williams, LMFT",
+        facilitator: "George Hutchins",
     },
     {
       name: "Dual Diagnosis Group",
       day: "Fridays",
       time: "5:30 PM - 7:00 PM",
       location: "Group Room A",
-      facilitator: "Dr. Robert Martinez, MD",
+      facilitator: "Erin Stark",
     },
     {
       name: "Alumni Support Group",
       day: "Saturdays",
       time: "10:00 AM - 11:30 AM",
       location: "Community Room",
-      facilitator: "Michael Chen, LPC",
+      facilitator: "Erin Stark",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function PatientPortal() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative minn-h-screen flex items-center overflow-hidden">
+      <section className="flex overflow-hidden relative items-center minn-h-screen">
         {/* Background image with right-to-left fade */}
         <div className="absolute inset-0">
           <Image
@@ -118,25 +118,25 @@ export default function PatientPortal() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-gold/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg animate-pulse delay-500"></div>
+        <div className="absolute left-10 top-20 w-32 h-32 rounded-full blur-xl animate-pulse bg-white/10"></div>
+        <div className="absolute right-10 bottom-20 w-48 h-48 rounded-full blur-2xl delay-1000 animate-pulse bg-brand-gold/20"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full blur-lg delay-500 animate-pulse bg-white/5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="relative px-4 mx-auto w-full max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center min-h-[80vh] flex flex-col justify-center">
             {/* Main Headline */}
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight text-white animate-in fade-in slide-in-from-bottom duration-1000">
                 Patient{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-500 from-brand-gold">
                   Portal
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000">
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed duration-1000 md:text-2xl text-white/90 animate-in fade-in slide-in-from-bottom">
                 Access your treatment information, schedule appointments, and
                 connect with resources to support your
-                <span className="text-brand-gold font-semibold">
+                <span className="font-semibold text-brand-gold">
                   {" "}
                   recovery journey.
                 </span>
@@ -144,12 +144,12 @@ export default function PatientPortal() {
             </div>
 
             {/* Portal Access Notice */}
-            <div className="bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 rounded-2xl p-6 max-w-2xl mx-auto mb-8">
-              <div className="flex items-center justify-center space-x-3 text-yellow-100 mb-3">
+            <div className="p-6 mx-auto mb-8 max-w-2xl rounded-2xl border backdrop-blur-sm bg-yellow-500/20 border-yellow-400/30">
+              <div className="flex justify-center items-center mb-3 space-x-3 text-yellow-100">
                 <AlertCircle size={24} />
-                <span className="font-bold text-lg">Portal Login Required</span>
+                <span className="text-lg font-bold">Portal Login Required</span>
               </div>
-              <p className="text-yellow-100/90 text-sm">
+              <p className="text-sm text-yellow-100/90">
                 Please contact our office to set up your patient portal access.
               </p>
             </div>
@@ -159,36 +159,36 @@ export default function PatientPortal() {
 
       {/* Portal Features */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Portal Features
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Your patient portal provides secure access to your treatment
               information and tools to support your recovery.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {resources.map((resource, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 p-8 border border-gray-200"
+                className="p-8 bg-white rounded-xl border border-gray-200 shadow-lg transition-shadow duration-200 hover:shadow-xl"
               >
-                <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="flex justify-center items-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-blue/10">
                   <resource.icon
                     className="text-brand-blue"
                     size={32}
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                <h3 className="mb-4 text-xl font-semibold text-center text-gray-900">
                   {resource.title}
                 </h3>
-                <p className="text-gray-600 mb-6 text-center">
+                <p className="mb-6 text-center text-gray-600">
                   {resource.description}
                 </p>
-                <button className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200">
+                <button className="px-6 py-3 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark">
                   {resource.action}
                 </button>
               </div>
@@ -199,24 +199,24 @@ export default function PatientPortal() {
 
       {/* Support Groups */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Support Groups
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Join our support groups to connect with others on similar recovery
               journeys and build a strong support network.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {supportGroups.map((group, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8"
+                className="p-8 bg-white rounded-xl shadow-lg"
               >
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-semibold text-gray-900">
                     {group.name}
                   </h3>
@@ -252,8 +252,8 @@ export default function PatientPortal() {
                     </span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-brand-gold text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-gold-dark transition-colors duration-200">
-                  Join Group
+                <button className="px-6 py-3 mt-6 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-gold hover:bg-brand-gold-dark">
+                  Coming soon...
                 </button>
               </div>
             ))}
@@ -263,24 +263,24 @@ export default function PatientPortal() {
 
       {/* Emergency Contacts */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Emergency Contacts
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               If you need immediate support or are experiencing a crisis, these
               resources are available 24/7 to help you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {emergencyContacts.map((contact, index) => (
               <div
                 key={index}
-                className="bg-red-50 border border-red-200 rounded-xl p-8"
+                className="p-8 bg-red-50 rounded-xl border border-red-200"
               >
-                <div className="flex items-center space-x-4 mb-4">
+                <div className="flex items-center mb-4 space-x-4">
                   <Phone
                     className="text-red-600"
                     size={24}
@@ -291,7 +291,7 @@ export default function PatientPortal() {
                 </div>
                 <a
                   href={`tel:${contact.number.replace(/[^0-9]/g, "")}`}
-                  className="text-2xl font-bold text-red-600 hover:underline block mb-3"
+                  className="block mb-3 text-2xl font-bold text-red-600 hover:underline"
                 >
                   {contact.number}
                 </a>
@@ -304,20 +304,20 @@ export default function PatientPortal() {
 
       {/* Resources & Downloads */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Resources & Downloads
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
               Access helpful resources, forms, and educational materials to
               support your recovery journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">
                 Recovery Resources
               </h3>
               <ul className="space-y-3">
@@ -358,8 +358,8 @@ export default function PatientPortal() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">
                 Forms & Documents
               </h3>
               <ul className="space-y-3">
@@ -394,8 +394,8 @@ export default function PatientPortal() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="p-8 bg-white rounded-xl shadow-lg">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900">
                 Educational Materials
               </h3>
               <ul className="space-y-3">
@@ -435,24 +435,24 @@ export default function PatientPortal() {
 
       {/* Contact Information */}
       <section className="py-20 bg-brand-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="px-4 mx-auto max-w-7xl text-center sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             Need Help Accessing Your Portal?
           </h2>
-          <p className="text-xl text-brand-blue/80 mb-8 max-w-3xl mx-auto">
+          <p className="mx-auto mb-8 max-w-3xl text-xl text-brand-blue/80">
             If you need assistance with your patient portal or have questions
             about your treatment, our team is here to help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center sm:flex-row">
             <a
               href="tel:5551234567"
-              className="bg-white text-brand-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold bg-white rounded-lg transition-colors duration-200 text-brand-blue hover:bg-gray-100"
             >
               Call (555) 123-4567
             </a>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-brand-blue transition-colors duration-200"
+              className="px-8 py-4 text-lg font-semibold text-white rounded-lg border-2 border-white transition-colors duration-200 hover:bg-white hover:text-brand-blue"
             >
               Contact Us Online
             </Link>

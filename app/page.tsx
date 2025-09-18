@@ -134,7 +134,7 @@ export default function Home() {
                       Insurance Accepted
                     </div>
                     <div className="text-sm text-white/70">
-                      Most major plans
+                      Oregon Medicaid, Blue Cross Blue Shield, Kaiser Permanente, Moda, Humana, and more
                     </div>
                   </div>
                 </div>
