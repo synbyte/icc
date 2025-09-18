@@ -1,9 +1,13 @@
 "use client"
 import { CopilotPopup, ButtonProps, useChatContext } from "@copilotkit/react-ui";
 import { useCopilotReadable } from "@copilotkit/react-core";
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 
-const CopilotWrapper = ({ children }) => {
+interface CopilotWrapperProps {
+    children?: ReactNode;
+}
+
+const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
     
     const [programs, setPrograms] = useState([
         {
