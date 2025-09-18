@@ -120,7 +120,7 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
         value: programs,
     });
   return (
-    <div className="relative">
+    <div className="relative z-50">
       {children}
           <CopilotPopup
               Button={Button}
