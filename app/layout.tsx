@@ -1,9 +1,13 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
+import { CopilotKit } from "@copilotkit/react-core"
+import "@copilotkit/react-ui/styles.css"
+import CopilotWrapper from "@/components/copilot"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +38,7 @@ export default function RootLayout({
       >
         <Navigation />
         <Analytics />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen"><CopilotKit publicApiKey="ck_pub_b6c29a1db431c592d75d490eace6c893">{children}<CopilotWrapper/></CopilotKit></main>
         <Footer />
       </body>
     </html>

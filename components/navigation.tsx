@@ -18,8 +18,8 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/60 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-brand-gold">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-40 border-b-2 shadow-lg backdrop-blur-md bg-white/60 border-brand-gold">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
@@ -31,25 +31,25 @@ export default function Navigation() {
               alt="Integrity Care Connection"
               width={300}
               height={160}
-              className="h-20 w-auto"
+              className="w-auto h-20"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-brand-blue hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-brand-blue hover:text-brand-gold"
               >
                 {item.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-linear-to-t from-brand-blue to-brand-blue/70 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-blue-dark transition-all duration-200 shadow-md shadow-brand-blue/50 hover:shadow-sm"
+              className="px-4 py-2 text-sm font-bold text-white rounded-full shadow-md transition-all duration-200 bg-linear-to-t from-brand-blue to-brand-blue/70 hover:bg-brand-blue-dark shadow-brand-blue/50 hover:shadow-sm"
             >
               Get Help Now
             </Link>
@@ -69,12 +69,12 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t sm:px-3">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-brand-blue block px-3 py-2 rounded-md text-base font-medium"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-brand-blue"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -82,7 +82,7 @@ export default function Navigation() {
               ))}
               <Link
                 href="/contact"
-                className="bg-brand-blue text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-blue-dark mt-4"
+                className="block px-3 py-2 mt-4 text-base font-medium text-white rounded-md bg-brand-blue hover:bg-brand-blue-dark"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Help Now
