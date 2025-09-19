@@ -1,7 +1,8 @@
 "use client"
-import { CopilotPopup, ButtonProps, useChatContext, useCopilotChatSuggestions} from "@copilotkit/react-ui";
+import { CopilotPopup, ButtonProps, useChatContext, useCopilotChatSuggestions, CopilotKitCSSProperties } from "@copilotkit/react-ui";
 import { useCopilotReadable, SuggestionItem, useCopilotAdditionalInstructions } from "@copilotkit/react-core";
 import { useState, ReactNode } from "react";
+import { MessageCircleQuestionMark } from "lucide-react";
 
 
 interface CopilotWrapperProps {
@@ -259,7 +260,11 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
     })
     
   return (
-    <div className="relative z-50">
+    <div style={
+      {
+        "--copilot-kit-primary-color": "#124767",
+      } as CopilotKitCSSProperties
+    } className="relative z-50">
       {children}
           <CopilotPopup
               Button={Button}
@@ -278,14 +283,14 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
 
 function Button({}: ButtonProps) {
     const { open, setOpen } = useChatContext();
-    const wrapperStyles = "w-24 bg-brand-blue text-white p-4 rounded-full text-center cursor-pointer";
+    const wrapperStyles = " bg-brand-blue text-white p-3 rounded-full text-center cursor-pointer shadow-md shadow-black/50 hover:shadow-sm transition-all duration-300 border border-brand-gold ring-2  ring-brand-blue hover:bg-brand-blue-light hover:scale-105";
     return (
       <div onClick={() => setOpen(!open)} className={wrapperStyles}>
         <button
           className={`${open ? "open" : ""}`}
           aria-label={open ? "Close Chat" : "Open Chat"}
         >
-          Ask AI
+          <MessageCircleQuestionMark color="#C39A6A" size={30} className="rounded-br cursor-pointer"/>
         </button>
       </div>
     );
