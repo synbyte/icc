@@ -119,8 +119,8 @@ export default function AdminPage() {
   // Login Screen
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="max-w-md w-full space-y-8">
+      <div className="flex justify-center items-center min-h-screen bg-gray-50">
+        <div className="space-y-8 w-full max-w-md">
           <div className="text-center">
             <h2 className="mt-6 text-3xl font-bold text-gray-900">
               Admin Login
@@ -130,9 +130,9 @@ export default function AdminPage() {
             </p>
           </div>
           <form className="mt-8 space-y-6" onSubmit={handleLogin}>
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
+            <div className="p-8 bg-white rounded-2xl shadow-xl">
               {loginError && (
-                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <div className="p-3 mb-4 bg-red-50 rounded-lg border border-red-200">
                   <p className="text-sm text-red-600">{loginError}</p>
                 </div>
               )}
@@ -150,7 +150,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setLoginData({ ...loginData, username: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     placeholder="Username"
                   />
                 </div>
@@ -167,7 +167,7 @@ export default function AdminPage() {
                     onChange={(e) =>
                       setLoginData({ ...loginData, password: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                     placeholder="Password"
                   />
                 </div>
@@ -175,7 +175,7 @@ export default function AdminPage() {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-blue-dark transition-colors duration-200"
+                  className="px-6 py-3 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   Sign In
                 </button>
@@ -191,20 +191,20 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-white border-b shadow-sm">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold text-gray-900">
                 Contact Submissions
               </h1>
-              <span className="ml-4 px-3 py-1 bg-brand-blue/10 text-brand-blue text-sm rounded-full">
+              <span className="px-3 py-1 ml-4 text-sm rounded-full bg-brand-blue/10 text-brand-blue">
                 {contacts.length} total
               </span>
             </div>
             <button
               onClick={handleLogout}
-              className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+              className="px-4 py-2 text-sm text-gray-600 rounded-lg border border-gray-300 transition-colors duration-200 hover:text-gray-900 hover:bg-gray-50"
             >
               Logout
             </button>
@@ -213,30 +213,30 @@ export default function AdminPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {loading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="w-8 h-8 border-4 border-brand-blue border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-8 h-8 rounded-full border-4 animate-spin border-brand-blue border-t-transparent"></div>
           </div>
         ) : (
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="overflow-hidden bg-white rounded-2xl shadow-xl">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-gray-50 border-b">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                       Contact Info
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                       Subject
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                       Urgency
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                       Date
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                       Actions
                     </th>
                   </tr>
@@ -245,24 +245,24 @@ export default function AdminPage() {
                   {contacts.map((contact) => (
                     <tr
                       key={contact.id}
-                      className="hover:bg-gray-50 cursor-pointer"
+                      className="cursor-pointer hover:bg-gray-50"
                       onClick={() => openModal(contact)}
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center">
-                          <div className="w-10 h-10 bg-brand-blue/10 rounded-full flex items-center justify-center mr-4">
+                          <div className="flex justify-center items-center mr-4 w-10 h-10 rounded-full bg-brand-blue/10">
                             <User size={20} className="text-brand-blue" />
                           </div>
                           <div>
                             <div className="text-sm font-medium text-gray-900">
                               {contact.full_name}
                             </div>
-                            <div className="text-sm text-gray-500 flex items-center mt-1">
+                            <div className="flex items-center mt-1 text-sm text-gray-500">
                               <Mail size={14} className="mr-1" />
                               {contact.email}
                             </div>
                             {contact.phone && (
-                              <div className="text-sm text-gray-500 flex items-center mt-1">
+                              <div className="flex items-center mt-1 text-sm text-gray-500">
                                 <Phone size={14} className="mr-1" />
                                 {contact.phone}
                               </div>
@@ -309,8 +309,8 @@ export default function AdminPage() {
                 </tbody>
               </table>
               {contacts.length === 0 && (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="py-12 text-center">
+                  <div className="flex justify-center items-center mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full">
                     <Mail size={32} className="text-gray-400" />
                   </div>
                   <p className="text-gray-500">No contact submissions yet.</p>
@@ -323,7 +323,7 @@ export default function AdminPage() {
 
       {/* Modal */}
       {isModalOpen && selectedContact && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="flex fixed inset-0 z-50 justify-center items-center p-4 backdrop-blur-sm bg-black/30">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="flex justify-between items-center p-6 border-b">
@@ -341,12 +341,12 @@ export default function AdminPage() {
             {/* Modal Content */}
             <div className="p-6 space-y-6">
               {/* Contact Info */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label className="text-sm font-medium text-gray-500">
                     Full Name
                   </label>
-                  <p className="text-lg text-gray-900 mt-1">
+                  <p className="mt-1 text-lg text-gray-900">
                     {selectedContact.full_name}
                   </p>
                 </div>
@@ -354,7 +354,7 @@ export default function AdminPage() {
                   <label className="text-sm font-medium text-gray-500">
                     Email
                   </label>
-                  <p className="text-lg text-gray-900 mt-1">
+                  <p className="mt-1 text-lg text-gray-900">
                     <a
                       href={`mailto:${selectedContact.email}`}
                       className="text-brand-blue hover:underline"
@@ -367,7 +367,7 @@ export default function AdminPage() {
                   <label className="text-sm font-medium text-gray-500">
                     Phone
                   </label>
-                  <p className="text-lg text-gray-900 mt-1">
+                  <p className="mt-1 text-lg text-gray-900">
                     {selectedContact.phone ? (
                       <a
                         href={`tel:${selectedContact.phone}`}
@@ -384,7 +384,7 @@ export default function AdminPage() {
                   <label className="text-sm font-medium text-gray-500">
                     Preferred Contact Method
                   </label>
-                  <p className="text-lg text-gray-900 mt-1 capitalize">
+                  <p className="mt-1 text-lg text-gray-900 capitalize">
                     {selectedContact.method}
                   </p>
                 </div>
@@ -409,7 +409,7 @@ export default function AdminPage() {
                   <label className="text-sm font-medium text-gray-500">
                     Submitted On
                   </label>
-                  <p className="text-lg text-gray-900 mt-1">
+                  <p className="mt-1 text-lg text-gray-900">
                     {formatDate(selectedContact.created_at)}
                   </p>
                 </div>
@@ -420,7 +420,7 @@ export default function AdminPage() {
                 <label className="text-sm font-medium text-gray-500">
                   Subject
                 </label>
-                <p className="text-lg text-gray-900 mt-1">
+                <p className="mt-1 text-lg text-gray-900">
                   {selectedContact.subject}
                 </p>
               </div>
@@ -430,7 +430,7 @@ export default function AdminPage() {
                 <label className="text-sm font-medium text-gray-500">
                   Message
                 </label>
-                <div className="mt-1 p-4 bg-gray-50 rounded-lg">
+                <div className="p-4 mt-1 bg-gray-50 rounded-lg">
                   <p className="text-gray-900 whitespace-pre-wrap">
                     {selectedContact.message}
                   </p>
@@ -438,17 +438,17 @@ export default function AdminPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex justify-end space-x-4 pt-4 border-t">
+              <div className="flex justify-end pt-4 space-x-4 border-t">
                 <a
                   href={`mailto:${selectedContact.email}?subject=Re: ${selectedContact.subject}`}
-                  className="px-4 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-blue-dark transition-colors duration-200"
+                  className="px-4 py-2 text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   Reply via Email
                 </a>
                 {selectedContact.phone && (
                   <a
                     href={`tel:${selectedContact.phone}`}
-                    className="px-4 py-2 border border-brand-blue text-brand-blue rounded-lg hover:bg-brand-blue/5 transition-colors duration-200"
+                    className="px-4 py-2 rounded-lg border transition-colors duration-200 border-brand-blue text-brand-blue hover:bg-brand-blue/5"
                   >
                     Call
                   </a>
