@@ -42,7 +42,7 @@ export default function Contact() {
       const contactData: ContactForm = {
         full_name: formData.name,
         email: formData.email,
-        phone: formData.phone || null,
+        phone: formData.phone || undefined, // Changed null to undefined
         subject: formData.subject,
         message: formData.message,
         method: formData.preferredContact,
@@ -266,7 +266,7 @@ export default function Contact() {
                 Send Us a Message
               </h2>
               {error && (
-                <div className="p-4 mb-6 bg-red-50 border border-red-200 rounded-lg">
+                <div className="p-4 mb-6 bg-red-50 rounded-lg border border-red-200">
                   <p className="text-sm text-red-600">{error}</p>
                 </div>
               )}
@@ -419,7 +419,7 @@ export default function Contact() {
                 >
                   {isLoading ? (
                     <>
-                      <div className="mr-2 w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="mr-2 w-5 h-5 rounded-full border-2 border-white animate-spin border-t-transparent"></div>
                       Sending...
                     </>
                   ) : (
