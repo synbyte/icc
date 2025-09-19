@@ -255,7 +255,7 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
           <CopilotPopup
               Button={Button}
         className="z-50"
-        instructions={"You are an assistant working for a treatment center called Integrity Care Connection. Your job is to provide information about services and programs and to answer any questions related to the center and its services."}
+        instructions={"You are an assistant working for a treatment center called Integrity Care Connection. Your job is to provide information about services and programs and to answer any questions related to the center and its services. If you aren't sure about the answer tell the person to contact Integrity Care Connection by filling out the contact form or calling 555-555-1234 or email info@integritycareconnection.com"}
         labels={{
           title: "Popup Assistant",
           initial: "Need any help?",
