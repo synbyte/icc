@@ -112,7 +112,137 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
             ],
             intensity: "Low",
             color: "blue",
-          }
+        },
+        {
+            title: "Individual Therapy",
+            discription: "Weekly individual treatment sessions ensuring each person addresses their unique needs and has the opportunity to be heard as an active decision maker in their treatment.",
+            features: [
+                "Weekly individual sessions",
+                "In-person or telehealth options",
+                "Treatment plan updates as needed",
+                "Qualified mental health professional oversight"
+            ],
+        },
+        {
+            title: "Group Therapy",
+            discription: "Daily group sessions allowing patients to see they're not alone and learn from others' experiences, failures, and successes on their wellness journey.",
+            features: [
+                "Daily group sessions",
+                "Addiction, relapse, and recovery topics",
+                "Life skills and psychosocial education",
+                "Meditation, yoga, and arts activities"
+            ],
+        },
+        {
+            title: "Family Therapy",
+            discription: "Encouraging reconnection with family in a safe environment, moderated by professional staff to repair damaged bonds and embrace the future as a unit.",
+            features: [
+                "Safe family discussions",
+                "Parent training and coaching",
+                "Professional moderation",
+                "Bond repair and healing"
+            ],
+        },
+        {
+            title: "Spiritual Acceptance Therapy",
+            discription: "Supporting all patients in their chosen beliefs or lack thereof, with community partnerships providing religious services and culturally specific spiritual needs.",
+            features: [
+                "Inclusive spiritual support",
+                "Community religious services",
+                " Cultural spiritual needs",
+                "Professional counseling sessions"
+            ],
+        },
+        {
+            title: "Life Skills Mentoring",
+            discription: "Supporting all patients in their chosen beliefs or lack thereof, with community partnerships providing religious services and culturally specific spiritual needs.",
+            features: [
+                "Inclusive spiritual support",
+                "Community religious services",
+                " Cultural spiritual needs",
+                "Professional counseling sessions"
+            ],
+        },
+        {
+            title: "PsychoSocial/Educational Counseling",
+            description: "Guidance with resume building, job preparedness, financial counseling, educational needs, and all tools necessary for educational, employment, and financial success.",
+            features: [
+                "Resume building and job skills",
+                "Financial counseling and budgeting",
+                "Educational support and GED prep",
+                "Professional development"
+            ],
+        },
+        {
+            title: "Health & Nutrition; Fitness",
+            description: "Encouraging physical fitness and proper nutrition through community partnerships with nutritionists and fitness centers, tailored to each individual's wellness journey.",
+            features: [
+                "Personalized fitness plans",
+                "Nutrition counseling",
+                "Community fitness partnerships",
+                "Mental and physical wellness"
+            ],
+        },
+        {
+            title: "Mental Clarity Sessions",
+            description: "Supporting overall brain health through meditation, stretching, yoga, mental exercises, relaxation techniques, and coping skills for mind, body, and spirit.",
+            features: [
+                "Meditation and yoga",
+                "Mental exercises",
+                "Relaxation techniques",
+                "Coping skills development"
+            ],
+        },
+        {
+            title: "Peer Support Sessions",
+            description: "Sessions led by certified Peer Specialists who speak from lived experiences, providing living proof that substance use and mental health issues can be overcome.",
+            features: [
+                "Certified Peer Specialists",
+                "Lived experience sharing",
+                "Real-life success stories",
+                "Peer-to-peer encouragement"
+            ],
+        },
+        {
+            title: "Individual/Group Outings",
+            description: "Fun, safe activities designed to immerse patients in community settings, teaching socially acceptable behaviors and encouraging healthy, sober community engagement.",
+            features: [
+                "Community integration activities",
+                "Cultural and ethnic specific events",
+                "Social skills development",
+                "Life balance support"
+            ],
+        },
+        {
+            title: "AA/Gamblers A/NA/ALANON",
+            description: "Encouraging participation in community support programs to gain different insights on coping, failure, and success from others on similar journeys.",
+            features: [
+                "Community meeting referrals",
+                "Cultural/ethnic specific groups",
+                "Peer support integration",
+                "Recovery toolbox building"
+            ],
+        },
+        {
+            title: "Open Sharing/Talking Circle",
+            description: "Open sessions for patients to share their journeys, discuss what works and what doesn't, and bond with others while providing mutual support and encouragement.",
+            features: [
+                "Open sharing sessions",
+                "Peer-to-peer advice",
+                "Staff-monitored discussions",
+                "Mutual encouragement"
+            ],
+        },
+        {
+            title: "Wellness Team",
+            description: "Our comprehensive team includes licensed behavioral/mental health professionals, medical professionals, counselors, community health workers, peer support specialists, and case managers.",
+            features: [
+                "Licensed professionals",
+                "Medical health professionals",
+                "Community health workers",
+                "Peer support specialists"
+            ],
+        }
     ])
     
     useCopilotReadable({

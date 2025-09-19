@@ -101,8 +101,8 @@ export default function Home() {
                     <div className="font-semibold text-white">
                       Walk-ins Welcome
                     </div>
-                    <div className="text-sm text-white/70">
-                      No appointment needed
+                    <div className="text-sm max-w-[250px]  text-white/70">
+                      No appointment needed, come in anytime Monday through Friday 8:30am to 4:30pm
                     </div>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ export default function Home() {
                     <div className="font-semibold text-white">
                       Dedicated Professionals
                     </div>
-                    <div className="text-sm text-white/70">
-                      Experienced & Trained
+                    <div className="text-sm max-w-[250px] text-white/70">
+                      Dedicated and trained professionals with years of lived experience
                     </div>
                   </div>
                 </div>

@@ -104,9 +104,9 @@ export default function Contact() {
       icon: Clock,
       title: "Hours",
       details: [
-        "Mon-Fri: 8:00 AM - 8:00 PM",
-        "Sat: 9:00 AM - 5:00 PM",
-        "Sun: Emergency Only",
+        "Mon-Fri: 8:00 AM - 5:00 PM",
+        "Sat&Sun: By appointment only",
+        ,
       ],
       action: null,
     },
