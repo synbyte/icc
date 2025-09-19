@@ -1,7 +1,8 @@
 "use client"
-import { CopilotPopup, ButtonProps, useChatContext } from "@copilotkit/react-ui";
-import { useCopilotReadable } from "@copilotkit/react-core";
+import { CopilotPopup, ButtonProps, useChatContext, useCopilotChatSuggestions} from "@copilotkit/react-ui";
+import { useCopilotReadable, SuggestionItem, useCopilotAdditionalInstructions } from "@copilotkit/react-core";
 import { useState, ReactNode } from "react";
+
 
 interface CopilotWrapperProps {
     children?: ReactNode;
@@ -249,6 +250,14 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
         description: "Available treatment programs at Integrity Care Connection",
         value: programs,
     });
+    useCopilotChatSuggestions({
+        instructions: "Suggest questions that can be asked.",
+        maxSuggestions:3
+    })
+    useCopilotAdditionalInstructions({
+        instructions:"If you cannot find an answer in programs data provided, tell them to contact Integrity Care Connection by submitting the contact form or calling 555-555-1234."
+    })
+    
   return (
     <div className="relative z-50">
       {children}
@@ -257,9 +266,11 @@ const CopilotWrapper = ({ children }: CopilotWrapperProps) => {
         className="z-50"
         instructions={"You are an assistant working for a treatment center called Integrity Care Connection. Your job is to provide information about services and programs and to answer any questions related to the center and its services. If you aren't sure about the answer tell the person to contact Integrity Care Connection by submitting the contact form or calling 555-555-1234."}
         labels={{
-          title: "Popup Assistant",
-          initial: "Need any help?",
-        }}
+          title: "Integrity Care Connection Assistant",
+          initial: "How can I help you?",
+              }}
+       
+        
       />
     </div>
   );
