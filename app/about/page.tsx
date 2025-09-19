@@ -199,7 +199,7 @@ export default function About() {
       </section>
 
       {/* Our Team */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -255,7 +255,7 @@ export default function About() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="p-8 text-center rounded-xl bg-brand-blue/5">
             <Heart
@@ -289,7 +289,7 @@ export default function About() {
       </section>
 
       {/* Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="p-8 text-center rounded-xl bg-brand-gold/5">
             <Shield
@@ -315,7 +315,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">

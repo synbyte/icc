@@ -158,7 +158,7 @@ export default function PatientPortal() {
       </section>
 
       {/* Portal Features */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-blue/10 to-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -198,7 +198,7 @@ export default function PatientPortal() {
       </section>
 
       {/* Support Groups */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-gold/20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -262,7 +262,7 @@ export default function PatientPortal() {
       </section>
 
       {/* Emergency Contacts */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-linear-to-b from-brand-gold/20 to-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -303,7 +303,7 @@ export default function PatientPortal() {
       </section>
 
       {/* Resources & Downloads */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-blue/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
