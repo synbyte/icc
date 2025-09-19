@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import { supabase, type ContactForm } from "@/lib/supabase";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ export default function Contact() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -29,11 +32,50 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      // Map form data to match database schema
+      const contactData: ContactForm = {
+        full_name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        subject: formData.subject,
+        message: formData.message,
+        method: formData.preferredContact,
+        urgency: formData.urgency,
+      };
+
+      const { error } = await supabase
+        .from('contacts')
+        .insert([contactData]);
+
+      if (error) {
+        throw error;
+      }
+
+      console.log("Form submitted successfully:", contactData);
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+        preferredContact: "phone",
+        urgency: "normal",
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError('There was an error submitting your message. Please try again or call us directly.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -223,6 +265,11 @@ export default function Contact() {
               <h2 className="mb-6 text-3xl font-bold text-gray-900">
                 Send Us a Message
               </h2>
+              {error && (
+                <div className="p-4 mb-6 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-sm text-red-600">{error}</p>
+                </div>
+              )}
               <form
                 onSubmit={handleSubmit}
                 className="space-y-6"
@@ -367,13 +414,23 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="flex justify-center items-center px-6 py-4 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
+                  disabled={isLoading}
+                  className="flex justify-center items-center px-6 py-4 w-full font-semibold text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  <Send
-                    className="mr-2"
-                    size={20}
-                  />
-                  Send Message
+                  {isLoading ? (
+                    <>
+                      <div className="mr-2 w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send
+                        className="mr-2"
+                        size={20}
+                      />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </div>

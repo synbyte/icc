@@ -31,6 +31,7 @@ npm run lint         # Run ESLint
 - **UI Components**: Custom components with shadcn/ui patterns
 - **Animations**: Motion library + CSS animations
 - **Analytics**: Vercel Analytics integration
+- **Database**: Supabase for contact form submissions
 
 ### Directory Structure
 - `/app/` - Next.js App Router pages (layout.tsx, page.tsx, route segments)
@@ -48,6 +49,7 @@ npm run lint         # Run ESLint
 - `/programs` - Treatment programs
 - `/contact` - Contact form and information
 - `/patient` - Patient portal access
+- `/admin` - Administrative dashboard for contact submissions (authentication required)
 
 ### Design System
 
@@ -107,9 +109,27 @@ npm run lint         # Run ESLint
 - TypeScript strict mode enabled
 - Custom eslint rule disables react/no-unescaped-entities for content-heavy pages
 
+### Database Integration
+- Contact form submissions automatically saved to Supabase
+- Form includes loading states, error handling, and success feedback
+- TypeScript interfaces defined for type safety (`ContactForm`, `Contact`)
+- Async/await pattern for database operations
+
+### Admin Dashboard
+- Protected admin interface at `/admin` route (no public links)
+- Simple login authentication with localStorage persistence
+- Tabular view of all contact submissions with search and filtering
+- Modal popup for detailed view of individual submissions
+- Direct email/phone contact actions from admin interface
+- Responsive design with urgency level indicators
+
 ## Key Integrations
 
 - **Vercel Analytics**: Integrated in root layout for performance tracking
+- **Supabase**: Backend-as-a-Service for contact form data storage
+  - Database URL: `https://afkkbbhspuejreqpehtn.supabase.co`
+  - Contact submissions stored in `contacts` table
+  - Client configured in `/lib/supabase.ts`
 - **Tailwind CSS v4**: Latest version with PostCSS integration
 - **shadcn/ui patterns**: Component structure follows shadcn conventions without full installation
 - **Motion library**: For advanced animations beyond CSS transitions
