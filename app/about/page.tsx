@@ -17,7 +17,7 @@ import { useState } from "react";
 import fatthiImage from "./images/fatthi.webp";
 import erinImage from "./images/erin.webp";
 import shannonImage from "./images/shannon.webp";
-import ometrisImage from "./images/ometris.webp";
+import willieImage from "./images/willie.jpg";
 import georgeImage from "./images/george2.jpg";
 import {cn} from "@/lib/utils";
 
@@ -51,12 +51,12 @@ export default function About() {
       bio: "George Hutchins serves as the Director of Operations at our treatment center, bringing both professional expertise and the perspective of someone who has walked the path of recovery. With years of sobriety and certifications as a Peer Support Specialist in multiple states, along with a Recovery Mentor certification, George understands firsthand the challenges of addiction—and the hope that comes from overcoming them.\n\nGeorge works closely with clients through one-on-one mentoring, group sessions, and supportive counseling under the guidance of licensed professionals. He believes in meeting each person where they are, helping them rebuild their lives, restore relationships, and move toward full, productive, sober living.\n\nA devoted father of four daughters and a son, George values family, connection, and community. Outside of work, he enjoys spending time outdoors, reading, and sharing moments with loved ones. His dedication to recovery and helping others succeed is at the heart of everything he does, inspiring both clients and colleagues alike. ",
     },
     {
-      name: "Dr. Ometris King",
+      name: "Dr. Willie Harris",
       title: "Clinical Director/CMHP/LPC",
       credentials: "",
       specialty: "Clinical Leadership & Mental Health",
       experience: "15+ years",
-      image: ometrisImage,
+      image: willieImage,
       bio: "Bio coming soon...",
     },
   ];
