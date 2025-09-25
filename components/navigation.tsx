@@ -17,8 +17,10 @@ export default function Navigation() {
     { name: "Contact", href: "/contact" },
   ];
 
-  return (
+  return (<>
+    <div className="flex justify-center w-full h-8 bg-brand-gold/90"><h1 className="text-lg font-bold text-brand-blue">Call 555-555-1234 today!</h1></div>
     <nav className="sticky top-0 z-40 border-b-2 shadow-lg backdrop-blur-md bg-white/60 border-brand-gold">
+      
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -91,6 +93,6 @@ export default function Navigation() {
           </div>
         )}
       </div>
-    </nav>
+    </nav></>
   );
 }
