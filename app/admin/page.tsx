@@ -440,7 +440,9 @@ export default function AdminPage() {
               {/* Action Buttons */}
               <div className="flex justify-end pt-4 space-x-4 border-t">
                 <a
-                  href={`mailto:${selectedContact.email}?subject=Re: ${selectedContact.subject}`}
+                  href={`mailto:${selectedContact.email}?subject=Re: ${selectedContact.subject}&body=${encodeURIComponent(
+    `\n\n--- Original Message ---\n${selectedContact.message}`
+  )}`}
                   className="px-4 py-2 text-white rounded-lg transition-colors duration-200 bg-brand-blue hover:bg-brand-blue-dark"
                 >
                   Reply via Email
